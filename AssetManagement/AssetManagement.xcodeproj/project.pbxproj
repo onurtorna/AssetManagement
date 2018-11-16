@@ -78,11 +78,14 @@
 			isa = PBXGroup;
 			children = (
 				104CF485219F59CE00CD8942 /* AppDelegate.swift */,
-				104CF487219F59CE00CD8942 /* ViewController.swift */,
-				104CF489219F59CE00CD8942 /* Main.storyboard */,
-				104CF48C219F59CF00CD8942 /* Assets.xcassets */,
-				104CF48E219F59CF00CD8942 /* LaunchScreen.storyboard */,
-				104CF491219F59CF00CD8942 /* Info.plist */,
+				104CF4AB219F5BC500CD8942 /* Extensions */,
+				104CF4A9219F5BB600CD8942 /* Models */,
+				104CF4A6219F5B3F00CD8942 /* Network */,
+				104CF4AA219F5BC000CD8942 /* Protocols */,
+				104CF4A5219F5B3900CD8942 /* Resources */,
+				104CF4A7219F5B4300CD8942 /* Scenes */,
+				104CF4A8219F5B5200CD8942 /* Storyboards */,
+				104CF4AC219F5BF900CD8942 /* Styling */,
 			);
 			path = AssetManagement;
 			sourceTree = "<group>";
@@ -94,6 +97,67 @@
 				104CF49C219F59CF00CD8942 /* Info.plist */,
 			);
 			path = AssetManagementTests;
+			sourceTree = "<group>";
+		};
+		104CF4A5219F5B3900CD8942 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				104CF491219F59CF00CD8942 /* Info.plist */,
+				104CF48C219F59CF00CD8942 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		104CF4A6219F5B3F00CD8942 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		104CF4A7219F5B4300CD8942 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				104CF487219F59CE00CD8942 /* ViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		104CF4A8219F5B5200CD8942 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				104CF489219F59CE00CD8942 /* Main.storyboard */,
+				104CF48E219F59CF00CD8942 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		104CF4A9219F5BB600CD8942 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		104CF4AA219F5BC000CD8942 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		104CF4AB219F5BC500CD8942 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		104CF4AC219F5BF900CD8942 /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Styling;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,7 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AssetManagement/Info.plist;
+				INFOPLIST_FILE = AssetManagement/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AssetManagement/Info.plist;
+				INFOPLIST_FILE = AssetManagement/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
