@@ -13,6 +13,16 @@
 		104CF48D219F59CF00CD8942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104CF48C219F59CF00CD8942 /* Assets.xcassets */; };
 		104CF490219F59CF00CD8942 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF48E219F59CF00CD8942 /* LaunchScreen.storyboard */; };
 		104CF49B219F59CF00CD8942 /* AssetManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF49A219F59CF00CD8942 /* AssetManagementTests.swift */; };
+		104CF4B0219F5F3800CD8942 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF4AF219F5F3800CD8942 /* ErrorHandler.swift */; };
+		104CF4B2219F5F4B00CD8942 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF4B1219F5F4B00CD8942 /* Network.swift */; };
+		104CF4B4219F5F5800CD8942 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF4B3219F5F5800CD8942 /* Response.swift */; };
+		104CF4B7219F5F7500CD8942 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF4B6219F5F7500CD8942 /* NetworkManager.swift */; };
+		104CF4B9219F5F8900CD8942 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF4B8219F5F8900CD8942 /* ServiceManager.swift */; };
+		104CF4BC219F5FBC00CD8942 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF4BB219F5FBC00CD8942 /* APIClient.swift */; };
+		104CF4BE219F5FC700CD8942 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF4BD219F5FC700CD8942 /* APIRouter.swift */; };
+		104CF4C1219F6A6000CD8942 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF4C0219F6A6000CD8942 /* LoginRequest.swift */; };
+		104CF4C3219F70CF00CD8942 /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF4C2219F70CF00CD8942 /* Dictionary+JSON.swift */; };
+		104CF4C6219F721300CD8942 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF4C5219F721300CD8942 /* LoginResponse.swift */; };
 		539C8D1FFF6C5EA1DE10188F /* Pods_AssetManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4E1D4C3AAC6023B72CE6B4 /* Pods_AssetManagement.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +48,16 @@
 		104CF496219F59CF00CD8942 /* AssetManagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssetManagementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF49A219F59CF00CD8942 /* AssetManagementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManagementTests.swift; sourceTree = "<group>"; };
 		104CF49C219F59CF00CD8942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		104CF4AF219F5F3800CD8942 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		104CF4B1219F5F4B00CD8942 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		104CF4B3219F5F5800CD8942 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		104CF4B6219F5F7500CD8942 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		104CF4B8219F5F8900CD8942 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		104CF4BB219F5FBC00CD8942 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		104CF4BD219F5FC700CD8942 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		104CF4C0219F6A6000CD8942 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		104CF4C2219F70CF00CD8942 /* Dictionary+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+JSON.swift"; sourceTree = "<group>"; };
+		104CF4C5219F721300CD8942 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		5855CB078C085CB62A4B62EA /* Pods-AssetManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssetManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-AssetManagement/Pods-AssetManagement.release.xcconfig"; sourceTree = "<group>"; };
 		A7D690FD40D622887FC5F808 /* Pods-AssetManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssetManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AssetManagement/Pods-AssetManagement.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +138,11 @@
 		104CF4A6219F5B3F00CD8942 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				104CF4AF219F5F3800CD8942 /* ErrorHandler.swift */,
+				104CF4B1219F5F4B00CD8942 /* Network.swift */,
+				104CF4B3219F5F5800CD8942 /* Response.swift */,
+				104CF4B5219F5F6200CD8942 /* Managers */,
+				104CF4BA219F5FA500CD8942 /* Service */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -156,6 +181,7 @@
 		104CF4AB219F5BC500CD8942 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				104CF4C2219F70CF00CD8942 /* Dictionary+JSON.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -165,6 +191,42 @@
 			children = (
 			);
 			path = Styling;
+			sourceTree = "<group>";
+		};
+		104CF4B5219F5F6200CD8942 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				104CF4B6219F5F7500CD8942 /* NetworkManager.swift */,
+				104CF4B8219F5F8900CD8942 /* ServiceManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		104CF4BA219F5FA500CD8942 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				104CF4BF219F6A5300CD8942 /* Request */,
+				104CF4C4219F720400CD8942 /* Response */,
+				104CF4BB219F5FBC00CD8942 /* APIClient.swift */,
+				104CF4BD219F5FC700CD8942 /* APIRouter.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		104CF4BF219F6A5300CD8942 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				104CF4C0219F6A6000CD8942 /* LoginRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		104CF4C4219F720400CD8942 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				104CF4C5219F721300CD8942 /* LoginResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		C1588CB30170A5B674AFCD06 /* Pods */ = {
@@ -334,8 +396,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				104CF4B7219F5F7500CD8942 /* NetworkManager.swift in Sources */,
+				104CF4BE219F5FC700CD8942 /* APIRouter.swift in Sources */,
+				104CF4C6219F721300CD8942 /* LoginResponse.swift in Sources */,
+				104CF4B0219F5F3800CD8942 /* ErrorHandler.swift in Sources */,
+				104CF4C1219F6A6000CD8942 /* LoginRequest.swift in Sources */,
 				104CF488219F59CE00CD8942 /* ViewController.swift in Sources */,
+				104CF4BC219F5FBC00CD8942 /* APIClient.swift in Sources */,
+				104CF4B2219F5F4B00CD8942 /* Network.swift in Sources */,
 				104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */,
+				104CF4B9219F5F8900CD8942 /* ServiceManager.swift in Sources */,
+				104CF4B4219F5F5800CD8942 /* Response.swift in Sources */,
+				104CF4C3219F70CF00CD8942 /* Dictionary+JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
