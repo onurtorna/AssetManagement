@@ -29,6 +29,7 @@ extension APIClient {
 
 // MARK: - Get all employees
 extension APIClient {
+
     static func getAllEmployees(completion: @escaping ([User]?, Error?) -> Void) {
 
         APIRouter.allEmployees.request.responseJSON { (dataResponse) in
@@ -44,12 +45,26 @@ extension APIClient {
 extension APIClient {
 
     static func getEmployee(id: Int,
-                            completion: @escaping (EmployeeRepsonse?, Error?) -> Void) {
+                            completion: @escaping (User?, Error?) -> Void) {
 
         APIRouter.employee(id: id).request.responseJSON { (dataResponse) in
 
             ServiceManager.handleResponse(dataResponse,
-                                          of: EmployeeRepsonse.self,
+                                          of: User.self,
+                                          completion: completion)
+        }
+    }
+}
+
+// MARK: - Get all assetss
+extension APIClient {
+
+    static func getAllAssets(completion: @escaping ([Asset]?, Error?) -> Void) {
+
+        APIRouter.allAssets.request.responseJSON { (dataResponse) in
+
+            ServiceManager.handleResponse(dataResponse,
+                                          of: [Asset].self,
                                           completion: completion)
         }
     }

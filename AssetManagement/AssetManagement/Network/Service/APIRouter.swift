@@ -16,6 +16,8 @@ enum APIRouter {
 
     case allEmployees
 
+    case allAssets
+
     // MARK: - Request
     var request: Alamofire.DataRequest {
 
@@ -39,7 +41,8 @@ enum APIRouter {
             return .post
 
         case .allEmployees,
-             .employee:
+             .employee,
+             .allAssets:
             return .get
         }
     }
@@ -64,6 +67,9 @@ enum APIRouter {
         case let .employee(id: id):
             return "employees/\(id)"
 
+        case .allAssets:
+            return "assets"
+
         }
     }
 
@@ -74,7 +80,7 @@ enum APIRouter {
         if let authenticationToken = SessionManager.shared.authentiactionToken {
             headers[HTTPHeader.Field.authorization] = HTTPHeader.Value.authorizationPrefix + authenticationToken
         }
-        
+
         return headers
     }
 
@@ -85,7 +91,8 @@ enum APIRouter {
             return LoginRequest.generateParameters(email: email,
                                                    password: password)
         case .employee,
-             .allEmployees:
+             .allEmployees,
+             .allAssets:
             return nil
         }
     }
