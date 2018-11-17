@@ -9,5 +9,10 @@
 import Foundation
 
 final class LoginResponse: Response {
-    // TODO: To be implemented
+
+    /// Logged in user
+    var user: User?
+
+    /// Authentication token
+    var token: String?
 }

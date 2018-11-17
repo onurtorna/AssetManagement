@@ -12,12 +12,12 @@ final class LoginDataController: LoginDataProtocol {
 
     func login(email: String?,
                password: String?,
-               completion: @escaping ((Error?) -> Void)) {
+               completion: @escaping ((User?, String?, Error?) -> Void)) {
 
         APIClient.login(email: email,
                         password: password) { (response, error) in
-                            // TODO: To be implemented
-                            completion(error)
+
+                            completion(response?.user, response?.token, error)
         }
     }
 }

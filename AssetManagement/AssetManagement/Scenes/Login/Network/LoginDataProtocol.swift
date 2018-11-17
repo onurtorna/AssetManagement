@@ -18,5 +18,5 @@ protocol LoginDataProtocol {
     ///   - completion: Completion Block
     func login(email: String?,
                password: String?,
-               completion: @escaping ((Error?) -> Void))
+               completion: @escaping ((User?, String?, Error?) -> Void))
 }

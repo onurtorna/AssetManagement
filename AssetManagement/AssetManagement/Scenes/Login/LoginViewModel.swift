@@ -57,7 +57,7 @@ extension LoginViewModel {
     func login() {
 
         dataController.login(email: state.email,
-                             password: state.password) { [weak self] (error) in
+                             password: state.password) { [weak self] (user, token, error) in
 
                                 guard let strongSelf = self else { return }
                                 guard error == nil else {
