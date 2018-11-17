@@ -9,7 +9,13 @@
 import UIKit
 
 final class AssetListViewController: UIViewController {
-    // TODO:
+    
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var addAssetButton: UIButton!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
 
 // MARK: - StoryboardLoadable
