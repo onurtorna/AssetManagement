@@ -23,6 +23,7 @@ final class EmployeeListViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.dataSource = self
+        tableView.delegate = self
 
         viewModel.stateChangeHandler = applyState(_:)
         viewModel.fetchEmployees()
@@ -44,6 +45,21 @@ extension EmployeeListViewController {
         case .dataFetch:
             tableView.reloadData()
         }
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension EmployeeListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+
+        guard let employee = viewModel.employee(at: indexPath.row) else { return }
+
+        let employeeDetailViewController = EmployeeDetailViewController.loadFromStoryboard()
+        employeeDetailViewController.viewModel = EmployeeDetailViewModel(employee: employee)
+        navigationController?.pushViewController(employeeDetailViewController,
+                                                 animated: true)
     }
 }
 
