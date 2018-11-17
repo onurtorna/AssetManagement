@@ -36,6 +36,7 @@ final class AssetListState {
 final class AssetListViewModel {
 
     private let state = AssetListState()
+    private let dataController: AssetListDataProtocol
 
     var stateChangeHandler: ((AssetListState.Change) -> Void)? {
         get {
@@ -44,5 +45,9 @@ final class AssetListViewModel {
         set {
             state.onChange = newValue
         }
+    }
+
+    init(dataController: AssetListDataProtocol) {
+        self.dataController = dataController
     }
 }

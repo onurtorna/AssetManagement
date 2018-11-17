@@ -44,6 +44,7 @@ private extension PostLoginPageViewController {
         employeeListViewController.viewModel = EmployeeListViewModel(dataController: EmployeeListDataController())
 
         let assetListViewController = AssetListViewController.loadFromStoryboard()
+        assetListViewController.viewModel = AssetListViewModel(dataController: AssetListDataController())
         viewControllers = [employeeListViewController, assetListViewController]
     }
 }

@@ -9,9 +9,11 @@
 import UIKit
 
 final class AssetListViewController: UIViewController {
-    
+
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var addAssetButton: UIButton!
+
+    var viewModel: AssetListViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

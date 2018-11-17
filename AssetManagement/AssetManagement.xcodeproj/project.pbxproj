@@ -43,6 +43,8 @@
 		102AF43821A0B53B008CEE20 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF43721A0B53B008CEE20 /* UIColor+Additions.swift */; };
 		102AF43A21A0B76A008CEE20 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF43921A0B76A008CEE20 /* Asset.swift */; };
 		102AF43C21A0BBD1008CEE20 /* AssetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF43B21A0BBD1008CEE20 /* AssetListViewModel.swift */; };
+		102AF43F21A0BC49008CEE20 /* AssetListDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF43E21A0BC49008CEE20 /* AssetListDataProtocol.swift */; };
+		102AF44121A0BC53008CEE20 /* AssetListDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF44021A0BC53008CEE20 /* AssetListDataController.swift */; };
 		104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF485219F59CE00CD8942 /* AppDelegate.swift */; };
 		104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF487219F59CE00CD8942 /* LoginViewController.swift */; };
 		104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF489219F59CE00CD8942 /* Login.storyboard */; };
@@ -110,6 +112,8 @@
 		102AF43721A0B53B008CEE20 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		102AF43921A0B76A008CEE20 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		102AF43B21A0BBD1008CEE20 /* AssetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListViewModel.swift; sourceTree = "<group>"; };
+		102AF43E21A0BC49008CEE20 /* AssetListDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListDataProtocol.swift; sourceTree = "<group>"; };
+		102AF44021A0BC53008CEE20 /* AssetListDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListDataController.swift; sourceTree = "<group>"; };
 		104CF482219F59CE00CD8942 /* AssetManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF485219F59CE00CD8942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104CF487219F59CE00CD8942 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 		102AF42321A09AD6008CEE20 /* Asset List */ = {
 			isa = PBXGroup;
 			children = (
+				102AF43D21A0BC35008CEE20 /* Network */,
 				102AF42421A09AF0008CEE20 /* AssetListViewController.swift */,
 				102AF43B21A0BBD1008CEE20 /* AssetListViewModel.swift */,
 			);
@@ -253,6 +258,15 @@
 				102AF43321A0A9DB008CEE20 /* EmployeeDetailViewModel.swift */,
 			);
 			path = "Employee Detail";
+			sourceTree = "<group>";
+		};
+		102AF43D21A0BC35008CEE20 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				102AF44021A0BC53008CEE20 /* AssetListDataController.swift */,
+				102AF43E21A0BC49008CEE20 /* AssetListDataProtocol.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		104CF479219F59CE00CD8942 = {
@@ -628,6 +642,7 @@
 				102AF40D21A08619008CEE20 /* AMView.swift in Sources */,
 				104CF4BC219F5FBC00CD8942 /* APIClient.swift in Sources */,
 				102AF43C21A0BBD1008CEE20 /* AssetListViewModel.swift in Sources */,
+				102AF44121A0BC53008CEE20 /* AssetListDataController.swift in Sources */,
 				104CF4B2219F5F4B00CD8942 /* Network.swift in Sources */,
 				102AF40F21A08641008CEE20 /* NibLoadable.swift in Sources */,
 				102AF3EC21A04B30008CEE20 /* LoginViewModel.swift in Sources */,
@@ -644,6 +659,7 @@
 				102AF3F921A06763008CEE20 /* HTTPHeader.swift in Sources */,
 				102AF3FD21A0690A008CEE20 /* EmployeeResponse.swift in Sources */,
 				104CF4C3219F70CF00CD8942 /* Dictionary+JSON.swift in Sources */,
+				102AF43F21A0BC49008CEE20 /* AssetListDataProtocol.swift in Sources */,
 				102AF40821A0751D008CEE20 /* UIViewController+Toaster.swift in Sources */,
 				102AF42A21A09CAD008CEE20 /* EmployeeListViewModel.swift in Sources */,
 				102AF41521A08889008CEE20 /* UIView+Constraints.swift in Sources */,
