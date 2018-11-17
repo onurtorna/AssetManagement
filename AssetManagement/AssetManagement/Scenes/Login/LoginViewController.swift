@@ -14,10 +14,10 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var infoLabel: UILabel!
-
-    var viewModel = LoginViewModel()
     @IBOutlet private weak var loginButton: UIButton!
     @IBOutlet private weak var scrollView: UIScrollView!
+    
+    var viewModel = LoginViewModel(dataController: LoginDataController())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +45,7 @@ private extension LoginViewController {
 extension LoginViewController {
 
     @IBAction func loginButtonTapped(_ sender: Any) {
+        viewModel.login()
     }
 
     @IBAction func textFieldEditingChanged(_ sender: UITextField) {

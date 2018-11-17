@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		102AF3EC21A04B30008CEE20 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF3EB21A04B30008CEE20 /* LoginViewModel.swift */; };
+		102AF3EF21A04CA3008CEE20 /* LoginDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF3EE21A04CA3008CEE20 /* LoginDataController.swift */; };
+		102AF3F121A04CAE008CEE20 /* LoginDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF3F021A04CAE008CEE20 /* LoginDataProtocol.swift */; };
 		104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF485219F59CE00CD8942 /* AppDelegate.swift */; };
 		104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF487219F59CE00CD8942 /* LoginViewController.swift */; };
 		104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF489219F59CE00CD8942 /* Login.storyboard */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		0C4E1D4C3AAC6023B72CE6B4 /* Pods_AssetManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AssetManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		102AF3EB21A04B30008CEE20 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		102AF3EE21A04CA3008CEE20 /* LoginDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataController.swift; sourceTree = "<group>"; };
+		102AF3F021A04CAE008CEE20 /* LoginDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataProtocol.swift; sourceTree = "<group>"; };
 		104CF482219F59CE00CD8942 /* AssetManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF485219F59CE00CD8942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104CF487219F59CE00CD8942 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -86,10 +90,20 @@
 		102AF3EA21A04890008CEE20 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				102AF3ED21A04C94008CEE20 /* Network */,
 				104CF487219F59CE00CD8942 /* LoginViewController.swift */,
 				102AF3EB21A04B30008CEE20 /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		102AF3ED21A04C94008CEE20 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				102AF3EE21A04CA3008CEE20 /* LoginDataController.swift */,
+				102AF3F021A04CAE008CEE20 /* LoginDataProtocol.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		104CF479219F59CE00CD8942 = {
@@ -408,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				104CF4B7219F5F7500CD8942 /* NetworkManager.swift in Sources */,
+				102AF3EF21A04CA3008CEE20 /* LoginDataController.swift in Sources */,
 				104CF4BE219F5FC700CD8942 /* APIRouter.swift in Sources */,
 				104CF4C6219F721300CD8942 /* LoginResponse.swift in Sources */,
 				104CF4B0219F5F3800CD8942 /* ErrorHandler.swift in Sources */,
@@ -418,6 +433,7 @@
 				102AF3EC21A04B30008CEE20 /* LoginViewModel.swift in Sources */,
 				104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */,
 				104CF4B9219F5F8900CD8942 /* ServiceManager.swift in Sources */,
+				102AF3F121A04CAE008CEE20 /* LoginDataProtocol.swift in Sources */,
 				104CF4B4219F5F5800CD8942 /* Response.swift in Sources */,
 				104CF4C3219F70CF00CD8942 /* Dictionary+JSON.swift in Sources */,
 			);

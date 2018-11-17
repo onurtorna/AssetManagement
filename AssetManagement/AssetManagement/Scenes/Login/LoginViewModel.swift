@@ -27,6 +27,7 @@ final class LoginState {
 final class LoginViewModel {
 
     private var state = LoginState()
+    private var dataController: LoginDataProtocol
 
     var stateChangeHandler: ((LoginState.Change) -> Void)? {
         get {
@@ -43,5 +44,29 @@ final class LoginViewModel {
 
     func updatePassword(_ password: String?) {
         state.password = password
+    }
+
+    init(dataController: LoginDataProtocol) {
+        self.dataController = dataController
+    }
+}
+
+// MARK: - Network
+extension LoginViewModel {
+
+    func login() {
+
+        dataController.login(email: state.email,
+                             password: state.password) { [weak self] (error) in
+
+                                guard let strongSelf = self else { return }
+                                guard error == nil else {
+                                    // TODO: Send error message change
+                                    return
+                                }
+
+                                // TODO: save authentication token
+                                strongSelf.stateChangeHandler?(.success)
+        }
     }
 }
