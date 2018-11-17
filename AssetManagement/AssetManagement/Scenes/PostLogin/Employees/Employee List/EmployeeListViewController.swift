@@ -16,11 +16,25 @@ final class EmployeeListViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var addEmployeeButton: UIButton!
-
+    @IBOutlet private weak var buttonStackView: UIStackView!
+    
     var viewModel: EmployeeListViewModel!
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true,
+                                                     animated: true)
+
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        applyStyling()
+        applyLocalization()
 
         tableView.dataSource = self
         tableView.delegate = self
@@ -45,6 +59,9 @@ extension EmployeeListViewController {
         case .dataFetch:
             tableView.reloadData()
         }
+    }
+    func applyLocalization() {
+        addEmployeeButton.setTitle("Add New Employee", for: .normal)
     }
 }
 

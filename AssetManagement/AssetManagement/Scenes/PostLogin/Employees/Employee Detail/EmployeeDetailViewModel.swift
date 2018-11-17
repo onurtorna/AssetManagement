@@ -13,6 +13,7 @@ final class EmployeeDetailState {
     enum Change {
         case error(message: String?)
         case loading(Bool)
+        case initialPublish(name: String)
     }
 
     var onChange: ((EmployeeDetailState.Change) -> Void)?
@@ -47,6 +48,7 @@ final class EmployeeDetailViewModel {
         }
         set {
             state.onChange = newValue
+            stateChangeHandler?(.initialPublish(name: state.employee.name))
         }
     }
 

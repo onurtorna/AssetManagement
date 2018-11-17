@@ -18,6 +18,11 @@ final class PostLoginPageViewController: TabmanViewController {
 
     private var viewControllers: [UIViewController]!
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
