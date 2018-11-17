@@ -52,6 +52,17 @@ final class EmployeeListViewModel {
         }
     }
 
+    /// Total count of the employees
+    var employeeCount: Int {
+        return state.employees?.count ?? 0
+    }
+
+    /// Specific employee at the given index
+    func employee(at index: Int) -> User? {
+        guard let employees = state.employees else { return nil }
+        return employees[index]
+    }
+
     init(dataController: EmployeeListDataProtocol) {
         self.dataController = dataController
     }

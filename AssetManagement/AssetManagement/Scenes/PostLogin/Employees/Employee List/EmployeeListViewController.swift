@@ -10,7 +10,63 @@ import UIKit
 
 final class EmployeeListViewController: UIViewController {
 
+    private enum Constant {
+        static let cellReuseIdentifier = "EmployeeListTableViewCell"
+    }
+
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var addEmployeeButton: UIButton!
+
     var viewModel: EmployeeListViewModel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        tableView.dataSource = self
+
+        viewModel.stateChangeHandler = applyState(_:)
+        viewModel.fetchEmployees()
+    }
+}
+
+// MARK: - Helpers
+extension EmployeeListViewController {
+
+    func applyState(_ change: EmployeeListState.Change) {
+
+        switch change {
+        case .loading(let isLoading):
+            showLoading(isLoading)
+
+        case .error(message: let message):
+            showToaster(type: .error, text: message)
+
+        case .dataFetch:
+            tableView.reloadData()
+        }
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension EmployeeListViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
+        return viewModel.employeeCount
+    }
+
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constant.cellReuseIdentifier),
+            let employee = viewModel.employee(at: indexPath.row)
+            else {
+                return UITableViewCell()
+        }
+
+        cell.textLabel?.text = employee.name
+        return cell
+    }
 }
 
 // MARK: - StoryboardLoadable

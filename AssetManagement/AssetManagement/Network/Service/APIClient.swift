@@ -29,12 +29,12 @@ extension APIClient {
 
 // MARK: - Get all employees
 extension APIClient {
-    static func getAllEmployees(completion: @escaping (AllEmployeesResponse?, Error?) -> Void) {
+    static func getAllEmployees(completion: @escaping ([User]?, Error?) -> Void) {
 
         APIRouter.allEmployees.request.responseJSON { (dataResponse) in
 
             ServiceManager.handleResponse(dataResponse,
-                                          of: AllEmployeesResponse.self,
+                                          of: [User].self,
                                           completion: completion)
         }
     }

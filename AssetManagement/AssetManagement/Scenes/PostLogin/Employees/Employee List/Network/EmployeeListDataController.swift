@@ -12,8 +12,8 @@ final class EmployeeListDataController: EmployeeListDataProtocol {
 
     func fetchAllEmployees(completion: @escaping (([User]?, Error?) -> Void)) {
 
-        APIClient.getAllEmployees { (response, error) in
-            completion(response?.employeeList, error)
+        APIClient.getAllEmployees { (employeeList, error) in
+            completion(employeeList, error)
         }
     }
 }

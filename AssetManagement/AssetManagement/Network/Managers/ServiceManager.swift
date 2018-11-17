@@ -18,9 +18,9 @@ final class ServiceManager: NSObject {
     ///   - response: Data response to handle
     ///   - type: Type of the response
     ///   - completion: Completion block
-    static func handleResponse<R: Response>(_ response: DataResponse<Any>,
-                                            of type: R.Type,
-                                            completion: (R?, Error?) -> Void) {
+    static func handleResponse<R: Codable>(_ response: DataResponse<Any>,
+                                           of type: R.Type,
+                                           completion: (R?, Error?) -> Void) {
 
         if let JSON = response.result.value {
             #if DEBUG
