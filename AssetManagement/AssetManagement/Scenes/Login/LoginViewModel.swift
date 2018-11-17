@@ -11,11 +11,18 @@ import Foundation
 final class LoginState {
 
     enum Change {
-        case error(message: String)
+        case error(message: String?)
         case success
     }
 
     var onChange: ((LoginState.Change) -> Void)?
+
+    /// Received error message to show to user
+    var receivedErrorMessage: String? {
+        didSet {
+            onChange?(.error(message: receivedErrorMessage))
+        }
+    }
 
     /// User's entered email
     var email: String?
@@ -56,17 +63,18 @@ extension LoginViewModel {
 
     func login() {
 
-        dataController.login(email: state.email,
-                             password: state.password) { [weak self] (user, token, error) in
+        dataController.login(email: "admin@admin.com",
+                             password: "admin") { [weak self] (user, token, error) in
 
                                 guard let strongSelf = self else { return }
                                 guard error == nil else {
-                                    // TODO: Send error message change
+                                    strongSelf.state.receivedErrorMessage = error?.am_message
                                     return
                                 }
 
                                 SessionManager.shared.user = user
                                 SessionManager.shared.authentiactionToken = token
+                                
                                 strongSelf.stateChangeHandler?(.success)
         }
     }
