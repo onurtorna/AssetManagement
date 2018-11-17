@@ -65,7 +65,8 @@ extension LoginViewModel {
                                     return
                                 }
 
-                                // TODO: save authentication token
+                                SessionManager.shared.user = user
+                                SessionManager.shared.authentiactionToken = token
                                 strongSelf.stateChangeHandler?(.success)
         }
     }
