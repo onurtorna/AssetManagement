@@ -53,6 +53,18 @@ final class AssetListViewModel {
         }
     }
 
+    /// Total number of assets
+    var assetCount: Int {
+        return state.assets?.count ?? 0
+    }
+
+    /// Returns specific asset at given index
+    func asset(at index: Int) -> Asset? {
+        guard let assets = state.assets else { return nil }
+
+        return assets[index]
+    }
+
     init(dataController: AssetListDataProtocol) {
         self.dataController = dataController
     }

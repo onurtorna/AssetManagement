@@ -75,6 +75,7 @@
                     </view>
                     <connections>
                         <outlet property="addAssetButton" destination="cHx-mn-Byj" id="07K-6S-nsL"/>
+                        <outlet property="buttonStackView" destination="4Q4-GX-S15" id="d7x-qs-kFg"/>
                         <outlet property="tableView" destination="94t-Nm-5oM" id="yz8-tL-d4G"/>
                     </connections>
                 </viewController>
