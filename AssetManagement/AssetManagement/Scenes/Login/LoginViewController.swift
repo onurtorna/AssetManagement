@@ -43,7 +43,16 @@ class LoginViewController: UIViewController {
 private extension LoginViewController {
 
     func applyState(_ change: LoginState.Change) {
-        // TODO: To be implemented
+
+        switch change {
+        case let .error(message: message):
+            showToaster(type: .error, text: message)
+
+        case .success:
+            showToaster(type: .success, text: "Success")
+            // TODO: Route to employees list
+            break
+        }
     }
 
     func applyStyling() {
@@ -65,10 +74,6 @@ private extension LoginViewController {
 
 // MARK: - Actions
 extension LoginViewController {
-
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
 
     @IBAction func loginButtonTapped(_ sender: Any) {
         viewModel.login()
