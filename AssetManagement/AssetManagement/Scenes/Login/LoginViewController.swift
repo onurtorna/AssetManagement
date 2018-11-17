@@ -15,15 +15,23 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var infoLabel: UILabel!
 
+    var viewModel = LoginViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         applyStyling()
+
+        viewModel.stateChangeHandler = applyState(_:)
     }
 }
 
 // MARK: - Helpers
 private extension LoginViewController {
+
+    func applyState(_ change: LoginState.Change) {
+        // TODO: To be implemented
+    }
 
     func applyStyling() {
         // TODO: To be implemented
@@ -34,11 +42,10 @@ private extension LoginViewController {
 extension LoginViewController: UITextFieldDelegate {
 
     @IBAction func textFieldEditingChanged(_ sender: UITextField) {
-        // TODO: To be implemented
         if sender == emailTextField {
-
+            viewModel.updateEmail(sender.text)
         } else if sender == passwordTextField {
-
+            viewModel.updatePassword(sender.text)
         }
     }
 }
