@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var infoLabel: UILabel!
 
     var viewModel = LoginViewModel()
+    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var scrollView: UIScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,7 @@ class LoginViewController: UIViewController {
 
         viewModel.stateChangeHandler = applyState(_:)
     }
+
 }
 
 // MARK: - Helpers
@@ -39,7 +42,10 @@ private extension LoginViewController {
 }
 
 // MARK: - Actions
-extension LoginViewController: UITextFieldDelegate {
+extension LoginViewController {
+
+    @IBAction func loginButtonTapped(_ sender: Any) {
+    }
 
     @IBAction func textFieldEditingChanged(_ sender: UITextField) {
         if sender == emailTextField {
