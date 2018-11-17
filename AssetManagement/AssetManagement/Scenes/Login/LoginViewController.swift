@@ -24,7 +24,6 @@ class LoginViewController: UIViewController {
     private var isKeyboardPresent = false
     private var lastContentInset = UIEdgeInsets.zero
 
-
     var viewModel = LoginViewModel(dataController: LoginDataController())
 
     override func viewDidLoad() {
@@ -45,6 +44,9 @@ private extension LoginViewController {
     func applyState(_ change: LoginState.Change) {
 
         switch change {
+        case .loading(let isLoading):
+            showLoading(isLoading)
+
         case let .error(message: message):
             showToaster(type: .error, text: message)
 

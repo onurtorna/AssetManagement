@@ -12,10 +12,17 @@ final class LoginState {
 
     enum Change {
         case error(message: String?)
+        case loading(Bool)
         case success
     }
 
     var onChange: ((LoginState.Change) -> Void)?
+
+    var isLoading = false {
+        didSet {
+            onChange?(.loading(isLoading))
+        }
+    }
 
     /// Received error message to show to user
     var receivedErrorMessage: String? {
@@ -63,9 +70,11 @@ extension LoginViewModel {
 
     func login() {
 
+        state.isLoading = true
         dataController.login(email: "admin@admin.com",
                              password: "admin") { [weak self] (user, token, error) in
 
+                                self?.state.isLoading = false
                                 guard let strongSelf = self else { return }
                                 guard error == nil else {
                                     strongSelf.state.receivedErrorMessage = error?.am_message
