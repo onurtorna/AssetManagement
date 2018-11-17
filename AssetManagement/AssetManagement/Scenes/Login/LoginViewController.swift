@@ -32,12 +32,8 @@ class LoginViewController: UIViewController {
 
         applyStyling()
         registerForKeyboardNotifications()
+        hideKeyboardWhenTappedOutside()
 
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
-                                                                 action: #selector(dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-        
         viewModel.stateChangeHandler = applyState(_:)
     }
 
