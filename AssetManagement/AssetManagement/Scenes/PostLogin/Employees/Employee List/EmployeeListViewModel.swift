@@ -13,6 +13,7 @@ final class EmployeeListState {
     enum Change {
         case error(message: String?)
         case loading(Bool)
+        case dataFetch
     }
 
     var onChange: ((EmployeeListState.Change) -> Void)?
@@ -29,11 +30,18 @@ final class EmployeeListState {
             onChange?(.error(message: receivedErrorMessage))
         }
     }
+
+    var employees: [User]? {
+        didSet {
+            onChange?(.dataFetch)
+        }
+    }
 }
 
 final class EmployeeListViewModel {
 
     private let state = EmployeeListState()
+    private var dataController: EmployeeListDataProtocol
 
     var stateChangeHandler: ((EmployeeListState.Change) -> Void)? {
         get {
@@ -41,6 +49,30 @@ final class EmployeeListViewModel {
         }
         set {
             state.onChange = newValue
+        }
+    }
+
+    init(dataController: EmployeeListDataProtocol) {
+        self.dataController = dataController
+    }
+}
+
+// MARK: - Network
+extension EmployeeListViewModel {
+
+    func fetchEmployees() {
+
+        state.isLoading = true
+        dataController.fetchAllEmployees { [weak self] (employees, error) in
+
+            self?.state.isLoading = false
+            guard let strongSelf = self else { return }
+            guard error == nil else {
+                strongSelf.state.receivedErrorMessage = error?.am_message
+                return
+            }
+
+            strongSelf.state.employees = employees
         }
     }
 }

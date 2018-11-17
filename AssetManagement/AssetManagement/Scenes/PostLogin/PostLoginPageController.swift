@@ -36,7 +36,7 @@ private extension PostLoginPageViewController {
     func prepareViewControllers() {
 
         let employeeListViewController = EmployeeListViewController.loadFromStoryboard()
-        employeeListViewController.viewModel = EmployeeListViewModel()
+        employeeListViewController.viewModel = EmployeeListViewModel(dataController: EmployeeListDataController())
 
         let assetListViewController = AssetListViewController.loadFromStoryboard()
         viewControllers = [employeeListViewController, assetListViewController]
