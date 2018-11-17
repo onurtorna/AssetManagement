@@ -34,6 +34,7 @@
 		102AF42221A09AB2008CEE20 /* Assets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102AF42121A09AB2008CEE20 /* Assets.storyboard */; };
 		102AF42521A09AF0008CEE20 /* AssetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF42421A09AF0008CEE20 /* AssetListViewController.swift */; };
 		102AF42821A09B57008CEE20 /* EmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF42721A09B57008CEE20 /* EmployeeListViewController.swift */; };
+		102AF42A21A09CAD008CEE20 /* EmployeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF42921A09CAD008CEE20 /* EmployeeListViewModel.swift */; };
 		104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF485219F59CE00CD8942 /* AppDelegate.swift */; };
 		104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF487219F59CE00CD8942 /* LoginViewController.swift */; };
 		104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF489219F59CE00CD8942 /* Login.storyboard */; };
@@ -92,6 +93,7 @@
 		102AF42121A09AB2008CEE20 /* Assets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Assets.storyboard; sourceTree = "<group>"; };
 		102AF42421A09AF0008CEE20 /* AssetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListViewController.swift; sourceTree = "<group>"; };
 		102AF42721A09B57008CEE20 /* EmployeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewController.swift; sourceTree = "<group>"; };
+		102AF42921A09CAD008CEE20 /* EmployeeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModel.swift; sourceTree = "<group>"; };
 		104CF482219F59CE00CD8942 /* AssetManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF485219F59CE00CD8942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104CF487219F59CE00CD8942 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				102AF42721A09B57008CEE20 /* EmployeeListViewController.swift */,
+				102AF42921A09CAD008CEE20 /* EmployeeListViewModel.swift */,
 			);
 			path = "Employee List";
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				102AF3FD21A0690A008CEE20 /* EmployeeResponse.swift in Sources */,
 				104CF4C3219F70CF00CD8942 /* Dictionary+JSON.swift in Sources */,
 				102AF40821A0751D008CEE20 /* UIViewController+Toaster.swift in Sources */,
+				102AF42A21A09CAD008CEE20 /* EmployeeListViewModel.swift in Sources */,
 				102AF41521A08889008CEE20 /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

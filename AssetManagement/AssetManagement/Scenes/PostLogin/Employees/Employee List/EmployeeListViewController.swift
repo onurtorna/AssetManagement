@@ -10,6 +10,7 @@ import UIKit
 
 final class EmployeeListViewController: UIViewController {
 
+    var viewModel: EmployeeListViewModel!
 }
 
 // MARK: - StoryboardLoadable
