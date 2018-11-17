@@ -13,7 +13,7 @@ final class AssetListState {
     enum Change {
         case error(message: String?)
         case loading(Bool)
-        case initialPublish(name: String)
+        case dataFetch
     }
 
     var onChange: ((AssetListState.Change) -> Void)?
@@ -31,6 +31,12 @@ final class AssetListState {
         }
     }
 
+    /// All assets
+    var assets: [Asset]? {
+        didSet {
+            onChange?(.dataFetch)
+        }
+    }
 }
 
 final class AssetListViewModel {
@@ -49,5 +55,25 @@ final class AssetListViewModel {
 
     init(dataController: AssetListDataProtocol) {
         self.dataController = dataController
+    }
+}
+
+// MARK: - Network
+extension AssetListViewModel {
+
+    func fetchAssets() {
+
+        state.isLoading = true
+        dataController.fetchAllAssets { [weak self] (assets, error) in
+
+            self?.state.isLoading = false
+            guard let strongSelf = self else { return }
+            guard error == nil else {
+                strongSelf.state.receivedErrorMessage = error?.am_message
+                return
+            }
+
+            strongSelf.state.assets = assets
+        }
     }
 }

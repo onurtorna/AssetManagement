@@ -17,6 +17,25 @@ final class AssetListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        viewModel.stateChangeHandler = applyState(_:)
+    }
+}
+
+// MARK: - Helpers
+private extension AssetListViewController {
+
+    func applyState(_ change: AssetListState.Change) {
+        switch change {
+        case .loading(let isLoading):
+            showLoading(isLoading)
+
+        case .error(message: let message):
+            showToaster(type: .error, text: message)
+
+        case .dataFetch:
+            tableView.reloadData()
+        }
     }
 }
 
