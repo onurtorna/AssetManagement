@@ -14,4 +14,11 @@ class Global {
 
         static let message = "ErrorMessage"
     }
+
+    enum Storyboard {
+        static let login = "Login"
+        static let postLogin = "PostLogin"
+        static let assets = "Assets"
+        static let employees = "Employees"
+    }
 }

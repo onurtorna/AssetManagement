@@ -28,6 +28,12 @@
 		102AF41321A08686008CEE20 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 102AF41221A08686008CEE20 /* LoadingView.xib */; };
 		102AF41521A08889008CEE20 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF41421A08889008CEE20 /* UIView+Constraints.swift */; };
 		102AF41721A088E0008CEE20 /* UIViewController+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF41621A088E0008CEE20 /* UIViewController+LoadingView.swift */; };
+		102AF41B21A08A44008CEE20 /* PostLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102AF41A21A08A44008CEE20 /* PostLogin.storyboard */; };
+		102AF41D21A08C0C008CEE20 /* PostLoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF41C21A08C0C008CEE20 /* PostLoginPageController.swift */; };
+		102AF42021A09A54008CEE20 /* Employees.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102AF41F21A09A54008CEE20 /* Employees.storyboard */; };
+		102AF42221A09AB2008CEE20 /* Assets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102AF42121A09AB2008CEE20 /* Assets.storyboard */; };
+		102AF42521A09AF0008CEE20 /* AssetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF42421A09AF0008CEE20 /* AssetListViewController.swift */; };
+		102AF42821A09B57008CEE20 /* EmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF42721A09B57008CEE20 /* EmployeeListViewController.swift */; };
 		104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF485219F59CE00CD8942 /* AppDelegate.swift */; };
 		104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF487219F59CE00CD8942 /* LoginViewController.swift */; };
 		104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF489219F59CE00CD8942 /* Login.storyboard */; };
@@ -80,6 +86,12 @@
 		102AF41221A08686008CEE20 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		102AF41421A08889008CEE20 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		102AF41621A088E0008CEE20 /* UIViewController+LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingView.swift"; sourceTree = "<group>"; };
+		102AF41A21A08A44008CEE20 /* PostLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostLogin.storyboard; sourceTree = "<group>"; };
+		102AF41C21A08C0C008CEE20 /* PostLoginPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginPageController.swift; sourceTree = "<group>"; };
+		102AF41F21A09A54008CEE20 /* Employees.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Employees.storyboard; sourceTree = "<group>"; };
+		102AF42121A09AB2008CEE20 /* Assets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Assets.storyboard; sourceTree = "<group>"; };
+		102AF42421A09AF0008CEE20 /* AssetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListViewController.swift; sourceTree = "<group>"; };
+		102AF42721A09B57008CEE20 /* EmployeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewController.swift; sourceTree = "<group>"; };
 		104CF482219F59CE00CD8942 /* AssetManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF485219F59CE00CD8942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104CF487219F59CE00CD8942 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +173,48 @@
 			path = "Custom Views";
 			sourceTree = "<group>";
 		};
+		102AF41821A089C9008CEE20 /* PostLogin */ = {
+			isa = PBXGroup;
+			children = (
+				102AF41C21A08C0C008CEE20 /* PostLoginPageController.swift */,
+				102AF41E21A09A3C008CEE20 /* Assets */,
+				102AF41921A08A2E008CEE20 /* Employees */,
+			);
+			path = PostLogin;
+			sourceTree = "<group>";
+		};
+		102AF41921A08A2E008CEE20 /* Employees */ = {
+			isa = PBXGroup;
+			children = (
+				102AF42621A09B45008CEE20 /* Employee List */,
+			);
+			path = Employees;
+			sourceTree = "<group>";
+		};
+		102AF41E21A09A3C008CEE20 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				102AF42321A09AD6008CEE20 /* Asset List */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		102AF42321A09AD6008CEE20 /* Asset List */ = {
+			isa = PBXGroup;
+			children = (
+				102AF42421A09AF0008CEE20 /* AssetListViewController.swift */,
+			);
+			path = "Asset List";
+			sourceTree = "<group>";
+		};
+		102AF42621A09B45008CEE20 /* Employee List */ = {
+			isa = PBXGroup;
+			children = (
+				102AF42721A09B57008CEE20 /* EmployeeListViewController.swift */,
+			);
+			path = "Employee List";
+			sourceTree = "<group>";
+		};
 		104CF479219F59CE00CD8942 = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				102AF3EA21A04890008CEE20 /* Login */,
+				102AF41821A089C9008CEE20 /* PostLogin */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -240,8 +295,11 @@
 		104CF4A8219F5B5200CD8942 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				104CF489219F59CE00CD8942 /* Login.storyboard */,
+				102AF42121A09AB2008CEE20 /* Assets.storyboard */,
+				102AF41F21A09A54008CEE20 /* Employees.storyboard */,
 				104CF48E219F59CF00CD8942 /* LaunchScreen.storyboard */,
+				104CF489219F59CE00CD8942 /* Login.storyboard */,
+				102AF41A21A08A44008CEE20 /* PostLogin.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -424,10 +482,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				102AF42021A09A54008CEE20 /* Employees.storyboard in Resources */,
+				102AF42221A09AB2008CEE20 /* Assets.storyboard in Resources */,
 				104CF490219F59CF00CD8942 /* LaunchScreen.storyboard in Resources */,
 				102AF41321A08686008CEE20 /* LoadingView.xib in Resources */,
 				104CF48D219F59CF00CD8942 /* Assets.xcassets in Resources */,
 				104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */,
+				102AF41B21A08A44008CEE20 /* PostLogin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,12 +578,15 @@
 				104CF4C1219F6A6000CD8942 /* LoginRequest.swift in Sources */,
 				104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */,
 				102AF41121A08650008CEE20 /* StoryboardLoadable.swift in Sources */,
+				102AF42521A09AF0008CEE20 /* AssetListViewController.swift in Sources */,
+				102AF41D21A08C0C008CEE20 /* PostLoginPageController.swift in Sources */,
 				102AF40D21A08619008CEE20 /* AMView.swift in Sources */,
 				104CF4BC219F5FBC00CD8942 /* APIClient.swift in Sources */,
 				104CF4B2219F5F4B00CD8942 /* Network.swift in Sources */,
 				102AF40F21A08641008CEE20 /* NibLoadable.swift in Sources */,
 				102AF3EC21A04B30008CEE20 /* LoginViewModel.swift in Sources */,
 				102AF41721A088E0008CEE20 /* UIViewController+LoadingView.swift in Sources */,
+				102AF42821A09B57008CEE20 /* EmployeeListViewController.swift in Sources */,
 				104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */,
 				104CF4B9219F5F8900CD8942 /* ServiceManager.swift in Sources */,
 				102AF3F121A04CAE008CEE20 /* LoginDataProtocol.swift in Sources */,

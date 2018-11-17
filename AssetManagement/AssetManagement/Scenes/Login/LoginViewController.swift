@@ -8,7 +8,11 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, StoryboardLoadable {
+
+    static var defaultStoryboardName: String {
+        return Global.Storyboard.login
+    }
 
     private enum Constant {
         static let keyboardMargin: CGFloat = 20
@@ -30,6 +34,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         applyStyling()
+        applyLocalization()
         registerForKeyboardNotifications()
         hideKeyboardWhenTappedOutside()
 
@@ -52,13 +57,22 @@ private extension LoginViewController {
 
         case .success:
             showToaster(type: .success, text: "Success")
-            // TODO: Route to employees list
-            break
+            let postLoginViewController = PostLoginPageViewController.loadFromStoryboard()
+            navigationController?.pushViewController(postLoginViewController, animated: true)
+
         }
     }
 
     func applyStyling() {
         // TODO: To be implemented
+    }
+
+    func applyLocalization() {
+        loginButton.setTitle("Login",
+                             for: .normal)
+        infoLabel.text = "Please enter your admin email and password"
+        emailTextField.placeholder = "Email"
+        passwordTextField.placeholder = "Password"
     }
 
     func registerForKeyboardNotifications() {
