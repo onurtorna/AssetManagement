@@ -60,6 +60,14 @@ extension EmployeeListViewController {
             tableView.reloadData()
         }
     }
+
+    func applyStyling() {
+
+        buttonStackView.addSeparatorAtTop(leftMargin: 0,
+                                          rightMargin: 0,
+                                          color: .black)
+    }
+
     func applyLocalization() {
         addEmployeeButton.setTitle("Add New Employee", for: .normal)
     }

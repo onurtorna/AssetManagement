@@ -39,6 +39,8 @@
 		102AF42F21A09D7E008CEE20 /* EmployeeListDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF42E21A09D7E008CEE20 /* EmployeeListDataController.swift */; };
 		102AF43221A0A92C008CEE20 /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF43121A0A92C008CEE20 /* EmployeeDetailViewController.swift */; };
 		102AF43421A0A9DB008CEE20 /* EmployeeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF43321A0A9DB008CEE20 /* EmployeeDetailViewModel.swift */; };
+		102AF43621A0B4AF008CEE20 /* UIView+Separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF43521A0B4AF008CEE20 /* UIView+Separator.swift */; };
+		102AF43821A0B53B008CEE20 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF43721A0B53B008CEE20 /* UIColor+Additions.swift */; };
 		104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF485219F59CE00CD8942 /* AppDelegate.swift */; };
 		104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF487219F59CE00CD8942 /* LoginViewController.swift */; };
 		104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF489219F59CE00CD8942 /* Login.storyboard */; };
@@ -102,6 +104,8 @@
 		102AF42E21A09D7E008CEE20 /* EmployeeListDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListDataController.swift; sourceTree = "<group>"; };
 		102AF43121A0A92C008CEE20 /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
 		102AF43321A0A9DB008CEE20 /* EmployeeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewModel.swift; sourceTree = "<group>"; };
+		102AF43521A0B4AF008CEE20 /* UIView+Separator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Separator.swift"; sourceTree = "<group>"; };
+		102AF43721A0B53B008CEE20 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		104CF482219F59CE00CD8942 /* AssetManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF485219F59CE00CD8942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104CF487219F59CE00CD8942 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -358,7 +362,9 @@
 			children = (
 				104CF4C2219F70CF00CD8942 /* Dictionary+JSON.swift */,
 				102AF40221A06CDF008CEE20 /* Error+Additions.swift */,
+				102AF43721A0B53B008CEE20 /* UIColor+Additions.swift */,
 				102AF41421A08889008CEE20 /* UIView+Constraints.swift */,
+				102AF43521A0B4AF008CEE20 /* UIView+Separator.swift */,
 				102AF3F421A05AAE008CEE20 /* UIViewController+Keyboard.swift */,
 				102AF41621A088E0008CEE20 /* UIViewController+LoadingView.swift */,
 				102AF40721A0751D008CEE20 /* UIViewController+Toaster.swift */,
@@ -618,6 +624,7 @@
 				104CF4B2219F5F4B00CD8942 /* Network.swift in Sources */,
 				102AF40F21A08641008CEE20 /* NibLoadable.swift in Sources */,
 				102AF3EC21A04B30008CEE20 /* LoginViewModel.swift in Sources */,
+				102AF43621A0B4AF008CEE20 /* UIView+Separator.swift in Sources */,
 				102AF41721A088E0008CEE20 /* UIViewController+LoadingView.swift in Sources */,
 				102AF42F21A09D7E008CEE20 /* EmployeeListDataController.swift in Sources */,
 				102AF42821A09B57008CEE20 /* EmployeeListViewController.swift in Sources */,
@@ -632,6 +639,7 @@
 				102AF40821A0751D008CEE20 /* UIViewController+Toaster.swift in Sources */,
 				102AF42A21A09CAD008CEE20 /* EmployeeListViewModel.swift in Sources */,
 				102AF41521A08889008CEE20 /* UIView+Constraints.swift in Sources */,
+				102AF43821A0B53B008CEE20 /* UIColor+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
