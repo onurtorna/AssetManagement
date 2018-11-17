@@ -8,6 +8,7 @@ use_frameworks!
 def asset_management
     pod 'Alamofire', '~> 4.7'
     pod 'Toast-Swift', '~> 4.0.0'
+    pod 'Tabman', '~> 1.9.2'
 end
 
 target 'AssetManagement' do

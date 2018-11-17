@@ -1,20 +1,32 @@
 PODS:
   - Alamofire (4.7.3)
+  - AutoInsetter (1.2.6)
+  - Pageboy (2.5.4)
+  - Tabman (1.9.2):
+    - AutoInsetter (~> 1.2.0)
+    - Pageboy (~> 2.5.0)
   - Toast-Swift (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - Tabman (~> 1.9.2)
   - Toast-Swift (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AutoInsetter
+    - Pageboy
+    - Tabman
     - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AutoInsetter: 3713c857f3c0cc4b6265fe55ecf0c14bfe8622ee
+  Pageboy: 46d743783414a18f8b27a988485e0ed2ea219ff7
+  Tabman: a09f7d7aa62b231ec475ca9eb9171f7cc973a3d7
   Toast-Swift: 594b5c5e5129f15438e410207e43287f027b3c00
 
-PODFILE CHECKSUM: 0695aa5e6223c367390bb4b8cf042c2ea46ee29e
+PODFILE CHECKSUM: d0cae18c23226786bf83771c4f9ba69e448a96d6
 
 COCOAPODS: 1.5.3
