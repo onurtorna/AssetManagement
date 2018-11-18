@@ -42,10 +42,7 @@ final class AssignAssetToEmployeeState {
             onChange?(.assetsFetch)
         }
     }
-
-    /// Selected asset to be assigned to employee
-    var selectedAsset: Asset?
-
+    
     init(employee: User) {
         self.employee = employee
     }
@@ -67,6 +64,17 @@ final class AssignAssetToEmployeeViewModel {
                 stateChangeHandler?(.initialPublish(String(employeeFirstname)))
             }
         }
+    }
+
+    /// Total asset count
+    var assetCount: Int {
+        return state.assets?.count ?? 0
+    }
+
+    /// Returns asset at specified index
+    func asset(at index: Int) -> Asset? {
+        guard let assets = state.assets else { return nil }
+        return assets[index]
     }
 
     init(employee: User,
@@ -98,13 +106,11 @@ extension AssignAssetToEmployeeViewModel {
         }
     }
 
-    func assignAssetToEmployee() {
-
-        guard let assetId = state.selectedAsset?.id else { return }
+    func assignAssetToEmployee(asset: Asset) {
 
         state.isLoading = true
         dataController.assignAssetToEmployee(
-            assetId: assetId,
+            assetId: asset.id,
             employeeId: state.employee.id) { [weak self] (error) in
 
                 self?.state.isLoading = false
