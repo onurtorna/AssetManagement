@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                         <state key="normal" title="Add Asset"/>
                                         <connections>
-                                            <action selector="addAssetButton:" destination="mXG-el-uFY" eventType="touchUpInside" id="AaN-EB-KsQ"/>
+                                            <action selector="addAssetButton:" destination="mXG-el-uFY" eventType="touchUpInside" id="Gjf-od-z6Y"/>
                                         </connections>
                                     </button>
                                 </subviews>

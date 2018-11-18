@@ -71,8 +71,8 @@ extension LoginViewModel {
     func login() {
 
         state.isLoading = true
-        dataController.login(email: "admin@admin.com",
-                             password: "admin") { [weak self] (user, token, error) in
+        dataController.login(email: state.email,
+                             password: state.password) { [weak self] (user, token, error) in
 
                                 self?.state.isLoading = false
                                 guard let strongSelf = self else { return }
