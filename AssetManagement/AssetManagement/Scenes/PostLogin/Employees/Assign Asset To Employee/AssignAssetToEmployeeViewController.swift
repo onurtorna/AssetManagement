@@ -111,6 +111,6 @@ extension AssignAssetToEmployeeViewController: UITableViewDelegate {
 extension AssignAssetToEmployeeViewController: StoryboardLoadable {
 
     static var defaultStoryboardName: String {
-        return Global.Storyboard.assets
+        return Global.Storyboard.employees
     }
 }
