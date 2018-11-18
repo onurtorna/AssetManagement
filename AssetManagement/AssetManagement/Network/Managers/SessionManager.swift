@@ -20,4 +20,7 @@ final class SessionManager {
 
     /// Determines if employee list needs to be fetched again
     var employeeListNeedsRefresh = false
+
+    /// Determines if asset list needs to be fetched again
+    var assetListNeedsRefresh = false
 }

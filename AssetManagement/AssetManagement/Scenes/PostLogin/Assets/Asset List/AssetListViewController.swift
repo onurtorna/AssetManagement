@@ -20,6 +20,17 @@ final class AssetListViewController: UIViewController {
 
     var viewModel: AssetListViewModel!
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if SessionManager.shared.assetListNeedsRefresh,
+            viewModel.stateChangeHandler != nil  {
+
+            SessionManager.shared.employeeListNeedsRefresh = false
+            viewModel.fetchAssets()
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

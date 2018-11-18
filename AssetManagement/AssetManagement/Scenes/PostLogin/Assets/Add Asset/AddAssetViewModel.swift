@@ -72,6 +72,7 @@ extension AddAssetViewModel {
                                     }
 
                                     if asset != nil {
+                                        SessionManager.shared.assetListNeedsRefresh = true
                                         strongSelf.stateChangeHandler?(.success)
                                     }
         }
