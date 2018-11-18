@@ -24,6 +24,8 @@ enum APIRouter {
         notes: String?,
         serialNumber: String?)
 
+    case assignAssetToEmployee(assetId: Int, employeeId: Int)
+
     // MARK: - Request
     var request: Alamofire.DataRequest {
 
@@ -52,6 +54,9 @@ enum APIRouter {
              .employee,
              .allAssets:
             return .get
+
+        case .assignAssetToEmployee:
+            return .patch
         }
     }
 
@@ -84,6 +89,9 @@ enum APIRouter {
         case .createAsset:
             return "assets"
 
+        case let .assignAssetToEmployee(assetId: assetId, employeeId: _):
+            return "assets/\(assetId)" 
+
         }
     }
 
@@ -112,6 +120,9 @@ enum APIRouter {
             return CreateAssetRequest.generateParameters(name: name,
                                                          notes: notes,
                                                          serialNumber: serialNumber)
+
+        case .assignAssetToEmployee(assetId: _, employeeId: let employeeId):
+            return AssignAssetToEmployeeRequest.generateParameters(employeeId: employeeId)
 
         case .employee,
              .allEmployees,

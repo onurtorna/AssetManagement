@@ -104,3 +104,25 @@ extension APIClient {
         }
     }
 }
+
+// MARK: - Assign Asset to Employee
+extension APIClient {
+
+    static func assingAssetToEmployee(assetId: Int,
+                                      employeeId: Int,
+                                      completion: @escaping ((Error?) -> Void)) {
+
+        APIRouter.assignAssetToEmployee(assetId: assetId,
+                                        employeeId: employeeId)
+            .request.responseJSON { (dataResponse) in
+
+                let error = ErrorHandler.error(from: dataResponse)
+                guard error?.am_message == nil else {
+                        completion(error)
+                        return
+                }
+
+                completion(nil)
+        }
+    }
+}
