@@ -1,23 +1,24 @@
 //
-//  EmployeeDetailViewModel.swift
+//  AssignAssetToEmployeeViewModel.swift
 //  AssetManagement
 //
-//  Created by Onur Torna on 17.11.2018.
+//  Created by Onur Torna on 18.11.2018.
 //  Copyright © 2018 Onur Torna. All rights reserved.
 //
 
 import Foundation
 
-final class EmployeeDetailState {
+final class AssignAssetToEmployeeState {
 
     enum Change {
         case error(message: String?)
         case loading(Bool)
-        case initialPublish(name: String)
+        case initialPublish(String)
     }
 
-    var onChange: ((EmployeeDetailState.Change) -> Void)?
+    var onChange: ((AssignAssetToEmployeeState.Change) -> Void)?
 
+    /// Employee to assign a asset
     var employee: User
 
     var isLoading = false {
@@ -38,26 +39,24 @@ final class EmployeeDetailState {
     }
 }
 
-final class EmployeeDetailViewModel {
+final class AssignAssetToEmployeeViewModel {
 
-    private let state: EmployeeDetailState
+    private let state: AssignAssetToEmployeeState
 
-    var stateChangeHandler: ((EmployeeDetailState.Change) -> Void)? {
+    var stateChangeHandler: ((AssignAssetToEmployeeState.Change) -> Void)? {
         get {
             return state.onChange
         }
         set {
             state.onChange = newValue
-            stateChangeHandler?(.initialPublish(name: state.employee.name))
+
+            if let employeeFirstname = state.employee.name.split(separator: " ").first {
+                stateChangeHandler?(.initialPublish(String(employeeFirstname)))
+            }
         }
     }
 
-    /// Current employee to show detail
-    var employee: User {
-        return state.employee
-    }
-
     init(employee: User) {
-        state = EmployeeDetailState(employee: employee)
+        state = AssignAssetToEmployeeState(employee: employee)
     }
 }

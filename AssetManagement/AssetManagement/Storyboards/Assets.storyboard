@@ -208,5 +208,35 @@
             </objects>
             <point key="canvasLocation" x="903" y="27"/>
         </scene>
+        <!--Assign Asset To Employee View Controller-->
+        <scene sceneID="XmG-Eg-Tub">
+            <objects>
+                <viewController storyboardIdentifier="AssignAssetToEmployeeViewController" id="sZC-lN-Kmn" customClass="AssignAssetToEmployeeViewController" customModule="AssetManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vAQ-mN-xlF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3qe-BZ-vPr">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3qe-BZ-vPr" firstAttribute="top" secondItem="cI0-VA-0PY" secondAttribute="top" id="DXL-CX-HHE"/>
+                            <constraint firstItem="cI0-VA-0PY" firstAttribute="bottom" secondItem="3qe-BZ-vPr" secondAttribute="bottom" id="E80-p9-wzD"/>
+                            <constraint firstItem="3qe-BZ-vPr" firstAttribute="leading" secondItem="cI0-VA-0PY" secondAttribute="leading" id="XHj-77-ghg"/>
+                            <constraint firstItem="cI0-VA-0PY" firstAttribute="trailing" secondItem="3qe-BZ-vPr" secondAttribute="trailing" id="nQe-jo-ylO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cI0-VA-0PY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="3qe-BZ-vPr" id="zkw-4L-Wtt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mzw-MD-zfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="910"/>
+        </scene>
     </scenes>
 </document>
