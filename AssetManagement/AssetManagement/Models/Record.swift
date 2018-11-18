@@ -42,6 +42,14 @@ struct Record: Codable {
         assetId = try values.decode(Int.self, forKey: .assetId)
     }
 
+    init(id: Int, date: Date, fromEmployeeId: Int, toEmployeeId: Int, assetId: Int) {
+        self.id = id
+        self.date = date
+        self.fromEmployeeId = fromEmployeeId
+        self.toEmployeeId = toEmployeeId
+        self.assetId = assetId
+    }
+
     enum CodingKeys: String, CodingKey {
         case id
         case date
