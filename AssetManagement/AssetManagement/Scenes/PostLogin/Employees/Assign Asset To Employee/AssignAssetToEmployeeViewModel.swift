@@ -14,6 +14,8 @@ final class AssignAssetToEmployeeState {
         case error(message: String?)
         case loading(Bool)
         case initialPublish(String)
+        case assetsFetch
+        case success
     }
 
     var onChange: ((AssignAssetToEmployeeState.Change) -> Void)?
@@ -34,6 +36,16 @@ final class AssignAssetToEmployeeState {
         }
     }
 
+    /// All Assignable assets
+    var assets: [Asset]? {
+        didSet {
+            onChange?(.assetsFetch)
+        }
+    }
+
+    /// Selected asset to be assigned to employee
+    var selectedAsset: Asset?
+
     init(employee: User) {
         self.employee = employee
     }
@@ -42,6 +54,7 @@ final class AssignAssetToEmployeeState {
 final class AssignAssetToEmployeeViewModel {
 
     private let state: AssignAssetToEmployeeState
+    private let dataController: AssignAssetToEmployeeProtocol
 
     var stateChangeHandler: ((AssignAssetToEmployeeState.Change) -> Void)? {
         get {
@@ -56,7 +69,52 @@ final class AssignAssetToEmployeeViewModel {
         }
     }
 
-    init(employee: User) {
+    init(employee: User,
+         dataController: AssignAssetToEmployeeProtocol) {
         state = AssignAssetToEmployeeState(employee: employee)
+        self.dataController = dataController
+    }
+}
+
+// MARK: - Network
+extension AssignAssetToEmployeeViewModel {
+
+    func fetchAssets() {
+
+        state.isLoading = true
+        dataController.fetchAllAssets { [weak self] (assets, error) in
+
+            self?.state.isLoading = false
+            guard let strongSelf = self else { return }
+            guard error == nil else {
+                strongSelf.state.receivedErrorMessage = error?.am_message
+                return
+            }
+
+            if let assets = assets {
+                // Filter assets that are already owned by the employee
+                strongSelf.state.assets = assets.filter( { $0.employeeId != strongSelf.state.employee.id })
+            }
+        }
+    }
+
+    func assignAssetToEmployee() {
+
+        guard let assetId = state.selectedAsset?.id else { return }
+
+        state.isLoading = true
+        dataController.assignAssetToEmployee(
+            assetId: assetId,
+            employeeId: state.employee.id) { [weak self] (error) in
+
+                self?.state.isLoading = false
+                guard let strongSelf = self else { return }
+                guard error == nil else {
+                    strongSelf.state.receivedErrorMessage = error?.am_message
+                    return
+                }
+
+                strongSelf.stateChangeHandler?(.success)
+        }
     }
 }

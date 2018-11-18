@@ -68,10 +68,11 @@ private extension EmployeeDetailViewController {
     @IBAction func showAssetHistoryButtonTapped(_ sender: Any) {
         // TODO:
     }
-    
+
     @IBAction func addAssetButtonTapped(_ sender: Any) {
         let assignAssetToEmployeeViewController = AssignAssetToEmployeeViewController.loadFromStoryboard()
-        assignAssetToEmployeeViewController.viewModel = AssignAssetToEmployeeViewModel(employee: viewModel.employee)
+        assignAssetToEmployeeViewController.viewModel = AssignAssetToEmployeeViewModel(employee: viewModel.employee,
+                                                                                       dataController: AssignAssetToEmployeeDataController())
         navigationController?.pushViewController(assignAssetToEmployeeViewController,
                                                  animated: true)
     }

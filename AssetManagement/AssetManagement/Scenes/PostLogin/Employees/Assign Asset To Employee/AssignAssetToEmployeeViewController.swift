@@ -18,6 +18,7 @@ final class AssignAssetToEmployeeViewController: UIViewController {
         super.viewDidLoad()
 
         viewModel.stateChangeHandler = applyState(_:)
+        viewModel.fetchAssets()
     }
 }
 
@@ -35,6 +36,13 @@ private extension AssignAssetToEmployeeViewController {
 
         case .initialPublish(let firstname):
             title = "Assing Asset to " + firstname
+
+        case .assetsFetch:
+            tableView.reloadData()
+
+        case .success:
+            showToaster(type: .success, text: "Assign Successful!")
+            navigationController?.popViewController(animated: true)
         }
     }
 }
