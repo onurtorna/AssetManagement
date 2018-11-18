@@ -58,6 +58,7 @@ private extension AddNewEmployeeViewController {
     }
 
     func applyLocalization() {
+        title = "Add New Employee"
         addEmployeeButton.setTitle("Add Employee",
                                    for: .normal)
         infoLabel.text = "Please enter full name of the new employee"

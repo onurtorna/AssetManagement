@@ -56,6 +56,7 @@ private extension EmployeeDetailViewController {
     }
 
     func applyLocalization() {
+        title = "Employee Actions"
         showAssetHistoryButton.setTitle("Show Asset History", for: .normal)
         addAssetButton.setTitle("Add New Asset to Employee", for: .normal)
     }

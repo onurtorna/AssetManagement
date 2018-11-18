@@ -53,6 +53,7 @@
 		103851A121A19FA800DF794C /* CreateEmployeeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851A021A19FA800DF794C /* CreateEmployeeRequest.swift */; };
 		103851A421A1A0CD00DF794C /* AddNewEmployeeDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851A321A1A0CD00DF794C /* AddNewEmployeeDataProtocol.swift */; };
 		103851A621A1A0DE00DF794C /* AddNewEmployeeDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851A521A1A0DE00DF794C /* AddNewEmployeeDataController.swift */; };
+		103851A921A1CD4600DF794C /* AddAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851A821A1CD4600DF794C /* AddAssetViewController.swift */; };
 		104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF485219F59CE00CD8942 /* AppDelegate.swift */; };
 		104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF487219F59CE00CD8942 /* LoginViewController.swift */; };
 		104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF489219F59CE00CD8942 /* Login.storyboard */; };
@@ -130,6 +131,7 @@
 		103851A021A19FA800DF794C /* CreateEmployeeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmployeeRequest.swift; sourceTree = "<group>"; };
 		103851A321A1A0CD00DF794C /* AddNewEmployeeDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEmployeeDataProtocol.swift; sourceTree = "<group>"; };
 		103851A521A1A0DE00DF794C /* AddNewEmployeeDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEmployeeDataController.swift; sourceTree = "<group>"; };
+		103851A821A1CD4600DF794C /* AddAssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssetViewController.swift; sourceTree = "<group>"; };
 		104CF482219F59CE00CD8942 /* AssetManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF485219F59CE00CD8942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104CF487219F59CE00CD8942 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		102AF41E21A09A3C008CEE20 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				103851A721A1CD3600DF794C /* Add Asset */,
 				102AF42321A09AD6008CEE20 /* Asset List */,
 			);
 			path = Assets;
@@ -303,6 +306,14 @@
 				103851A521A1A0DE00DF794C /* AddNewEmployeeDataController.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		103851A721A1CD3600DF794C /* Add Asset */ = {
+			isa = PBXGroup;
+			children = (
+				103851A821A1CD4600DF794C /* AddAssetViewController.swift */,
+			);
+			path = "Add Asset";
 			sourceTree = "<group>";
 		};
 		104CF479219F59CE00CD8942 = {
@@ -663,6 +674,7 @@
 				102AF3FF21A06B56008CEE20 /* AMError.swift in Sources */,
 				102AF3F721A05AFF008CEE20 /* SessionManager.swift in Sources */,
 				102AF40321A06CDF008CEE20 /* Error+Additions.swift in Sources */,
+				103851A921A1CD4600DF794C /* AddAssetViewController.swift in Sources */,
 				102AF3EF21A04CA3008CEE20 /* LoginDataController.swift in Sources */,
 				104CF4BE219F5FC700CD8942 /* APIRouter.swift in Sources */,
 				104CF4C6219F721300CD8942 /* LoginResponse.swift in Sources */,

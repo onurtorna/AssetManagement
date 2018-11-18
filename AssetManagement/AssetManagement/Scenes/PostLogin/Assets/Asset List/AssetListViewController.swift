@@ -31,6 +31,7 @@ final class AssetListViewController: UIViewController {
         viewModel.stateChangeHandler = applyState(_:)
         viewModel.fetchAssets()
     }
+
 }
 
 // MARK: - Helpers
@@ -57,6 +58,15 @@ private extension AssetListViewController {
 
     func applyLocalization() {
         addAssetButton.setTitle("Add New Asset", for: .normal)
+    }
+}
+
+// MARK: - Actions
+extension AssetListViewController {
+
+    @IBAction func addAssetButton(_ sender: Any) {
+        let addAssetViewController = AddAssetViewController.loadFromStoryboard()
+        navigationController?.pushViewController(addAssetViewController, animated: true)
     }
 }
 
