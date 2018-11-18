@@ -71,6 +71,8 @@
 		103851CF21A1FD3000DF794C /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851CE21A1FD3000DF794C /* StringUtils.swift */; };
 		103851D221A204EB00DF794C /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851D121A204EB00DF794C /* LoginTests.swift */; };
 		103851D421A2056400DF794C /* LoginDummyDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851D321A2056400DF794C /* LoginDummyDataController.swift */; };
+		103851D821A2070E00DF794C /* AssetListDummyDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851D721A2070E00DF794C /* AssetListDummyDataController.swift */; };
+		103851DA21A2079E00DF794C /* AssetListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851D921A2079E00DF794C /* AssetListTests.swift */; };
 		104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF485219F59CE00CD8942 /* AppDelegate.swift */; };
 		104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF487219F59CE00CD8942 /* LoginViewController.swift */; };
 		104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF489219F59CE00CD8942 /* Login.storyboard */; };
@@ -166,6 +168,8 @@
 		103851CE21A1FD3000DF794C /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		103851D121A204EB00DF794C /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		103851D321A2056400DF794C /* LoginDummyDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDummyDataController.swift; sourceTree = "<group>"; };
+		103851D721A2070E00DF794C /* AssetListDummyDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListDummyDataController.swift; sourceTree = "<group>"; };
+		103851D921A2079E00DF794C /* AssetListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListTests.swift; sourceTree = "<group>"; };
 		104CF482219F59CE00CD8942 /* AssetManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF485219F59CE00CD8942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104CF487219F59CE00CD8942 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -418,6 +422,23 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		103851D521A206EF00DF794C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				103851D621A206F800DF794C /* Asset List */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		103851D621A206F800DF794C /* Asset List */ = {
+			isa = PBXGroup;
+			children = (
+				103851D721A2070E00DF794C /* AssetListDummyDataController.swift */,
+				103851D921A2079E00DF794C /* AssetListTests.swift */,
+			);
+			path = "Asset List";
+			sourceTree = "<group>";
+		};
 		104CF479219F59CE00CD8942 = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +481,7 @@
 		104CF499219F59CF00CD8942 /* AssetManagementTests */ = {
 			isa = PBXGroup;
 			children = (
+				103851D521A206EF00DF794C /* Assets */,
 				103851D021A204D400DF794C /* Login */,
 				104CF49A219F59CF00CD8942 /* AssetManagementTests.swift */,
 				104CF49C219F59CF00CD8942 /* Info.plist */,
@@ -855,7 +877,9 @@
 			files = (
 				104CF49B219F59CF00CD8942 /* AssetManagementTests.swift in Sources */,
 				103851D421A2056400DF794C /* LoginDummyDataController.swift in Sources */,
+				103851DA21A2079E00DF794C /* AssetListTests.swift in Sources */,
 				103851D221A204EB00DF794C /* LoginTests.swift in Sources */,
+				103851D821A2070E00DF794C /* AssetListDummyDataController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
