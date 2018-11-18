@@ -28,11 +28,28 @@ final class AddNewEmployeeViewController: UIViewController {
 
         applyStyling()
         applyLocalization()
+
+        viewModel.stateChangeHandler = applyState(_:)
     }
 }
 
 // MARK: - Helpers
 private extension AddNewEmployeeViewController {
+
+    func applyState(_ change: AddNewEmployeeState.Change) {
+
+        switch change {
+        case .loading(let isLoading):
+            showLoading(isLoading)
+
+        case .error(message: let message):
+            showToaster(type: .error, text: message)
+
+        case .success:
+            showToaster(type: .success, text: "Adding Successfull!")
+            navigationController?.popViewController(animated: true)
+        }
+    }
 
     func applyStyling() {
         LabelCustomizer.applyFont(label: infoLabel, size: 14)
@@ -45,6 +62,18 @@ private extension AddNewEmployeeViewController {
                                    for: .normal)
         infoLabel.text = "Please enter full name of the new employee"
         employeeNameTextField.placeholder = "Name Surname"
+    }
+}
+
+// MARK: - Actions
+private extension AddNewEmployeeViewController {
+
+    @IBAction func employeeNameTextFieldEditingChanged(_ sender: UITextField) {
+        viewModel.updateEmployeeName(sender.text)
+    }
+
+    @IBAction func addNewEmployeeButtonTapped(_ sender: Any) {
+        viewModel.createNewEmployee()
     }
 }
 

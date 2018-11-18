@@ -59,10 +59,34 @@ final class AddNewEmployeeViewModel {
     }
 }
 
+// MARK: - Helpers
+private extension AddNewEmployeeViewModel {
+
+    func areFieldsValid() -> Bool {
+
+        guard let employeeName = state.employeeName else {
+            state.receivedErrorMessage = "Employee Name cannot be left empty"
+            return false
+        }
+
+        let nameList = employeeName.split(separator: " ")
+        guard nameList.count > 1 else {
+            state.receivedErrorMessage = "Employee's Full Name must be entered.\nThere must be at least one white space."
+            return false
+        }
+
+        return true
+    }
+}
+
 // MARK: - Network
 extension AddNewEmployeeViewModel {
 
     func createNewEmployee() {
+
+        guard areFieldsValid() else {
+            return
+        }
 
         state.isLoading = true
         dataController.createEmployee(name: state.employeeName) { [weak self] (user, error) in
@@ -74,6 +98,7 @@ extension AddNewEmployeeViewModel {
             }
 
             if user != nil {
+                SessionManager.shared.employeeListNeedsRefresh = true
                 strongSelf.stateChangeHandler?(.success)
             }
         }

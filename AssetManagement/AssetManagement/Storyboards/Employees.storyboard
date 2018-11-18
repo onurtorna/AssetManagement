@@ -165,6 +165,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="employeeNameTextFieldEditingChanged:" destination="fxw-yq-46o" eventType="editingChanged" id="IcE-79-vvZ"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXv-Qp-29j">
                                 <rect key="frame" x="20" y="50" width="335" height="0.0"/>
@@ -178,6 +181,9 @@
                                     <constraint firstAttribute="height" constant="54" id="O9h-E6-m3y"/>
                                 </constraints>
                                 <state key="normal" title="Add New Employee"/>
+                                <connections>
+                                    <action selector="addNewEmployeeButtonTapped:" destination="fxw-yq-46o" eventType="touchUpInside" id="pob-vu-jQS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

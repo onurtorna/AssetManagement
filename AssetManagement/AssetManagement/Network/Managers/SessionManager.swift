@@ -17,4 +17,7 @@ final class SessionManager {
 
     /// Authentication token of the user if he/she is logged in
     var authentiactionToken: String?
+
+    /// Determines if employee list needs to be fetched again
+    var employeeListNeedsRefresh = false
 }

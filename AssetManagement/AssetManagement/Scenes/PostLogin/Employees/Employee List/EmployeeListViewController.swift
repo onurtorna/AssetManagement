@@ -28,6 +28,13 @@ final class EmployeeListViewController: UIViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRow(at: indexPath, animated: true)
         }
+
+        if SessionManager.shared.employeeListNeedsRefresh,
+            viewModel.stateChangeHandler != nil  {
+
+            SessionManager.shared.employeeListNeedsRefresh = false
+            viewModel.fetchEmployees()
+        }
     }
 
     override func viewDidLoad() {
