@@ -14,6 +14,8 @@ final class AddNewEmployeeViewController: UIViewController {
     @IBOutlet private weak var addEmployeeButton: UIButton!
     @IBOutlet private weak var employeeNameTextField: UITextField!
 
+    var viewModel: AddNewEmployeeViewModel!
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 

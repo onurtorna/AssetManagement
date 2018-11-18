@@ -77,6 +77,7 @@ private extension EmployeeListViewController {
 
     @IBAction func addEmployeeButtonTapped(_ sender: Any) {
         let addNewEmployeeViewController = AddNewEmployeeViewController.loadFromStoryboard()
+        addNewEmployeeViewController.viewModel = AddNewEmployeeViewModel()
         navigationController?.pushViewController(addNewEmployeeViewController,
                                                  animated: true)
     }

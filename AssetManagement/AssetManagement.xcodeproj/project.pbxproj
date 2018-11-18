@@ -49,6 +49,7 @@
 		1038519821A18EB500DF794C /* LabelCustomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038519721A18EB500DF794C /* LabelCustomizer.swift */; };
 		1038519A21A18F1100DF794C /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038519921A18F1100DF794C /* Font.swift */; };
 		1038519D21A19BFA00DF794C /* AddNewEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038519C21A19BFA00DF794C /* AddNewEmployeeViewController.swift */; };
+		1038519F21A19ED300DF794C /* AddNewEmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038519E21A19ED300DF794C /* AddNewEmployeeViewModel.swift */; };
 		104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF485219F59CE00CD8942 /* AppDelegate.swift */; };
 		104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF487219F59CE00CD8942 /* LoginViewController.swift */; };
 		104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF489219F59CE00CD8942 /* Login.storyboard */; };
@@ -122,6 +123,7 @@
 		1038519721A18EB500DF794C /* LabelCustomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCustomizer.swift; sourceTree = "<group>"; };
 		1038519921A18F1100DF794C /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		1038519C21A19BFA00DF794C /* AddNewEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEmployeeViewController.swift; sourceTree = "<group>"; };
+		1038519E21A19ED300DF794C /* AddNewEmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEmployeeViewModel.swift; sourceTree = "<group>"; };
 		104CF482219F59CE00CD8942 /* AssetManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF485219F59CE00CD8942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104CF487219F59CE00CD8942 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				1038519C21A19BFA00DF794C /* AddNewEmployeeViewController.swift */,
+				1038519E21A19ED300DF794C /* AddNewEmployeeViewModel.swift */,
 			);
 			path = "Add Emploeyee";
 			sourceTree = "<group>";
@@ -673,6 +676,7 @@
 				102AF42F21A09D7E008CEE20 /* EmployeeListDataController.swift in Sources */,
 				102AF42821A09B57008CEE20 /* EmployeeListViewController.swift in Sources */,
 				104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */,
+				1038519F21A19ED300DF794C /* AddNewEmployeeViewModel.swift in Sources */,
 				102AF43A21A0B76A008CEE20 /* Asset.swift in Sources */,
 				104CF4B9219F5F8900CD8942 /* ServiceManager.swift in Sources */,
 				1038519621A18BF000DF794C /* ButtonCustomizer.swift in Sources */,
