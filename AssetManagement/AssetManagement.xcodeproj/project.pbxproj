@@ -68,6 +68,7 @@
 		103851C721A1F0B300DF794C /* RecordHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851C621A1F0B300DF794C /* RecordHistoryViewModel.swift */; };
 		103851CA21A1F13B00DF794C /* RecordHistoryDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851C921A1F13B00DF794C /* RecordHistoryDataController.swift */; };
 		103851CC21A1F14A00DF794C /* RecordHistoryDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851CB21A1F14A00DF794C /* RecordHistoryDataProtocol.swift */; };
+		103851CF21A1FD3000DF794C /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851CE21A1FD3000DF794C /* StringUtils.swift */; };
 		104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF485219F59CE00CD8942 /* AppDelegate.swift */; };
 		104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF487219F59CE00CD8942 /* LoginViewController.swift */; };
 		104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF489219F59CE00CD8942 /* Login.storyboard */; };
@@ -160,6 +161,7 @@
 		103851C621A1F0B300DF794C /* RecordHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordHistoryViewModel.swift; sourceTree = "<group>"; };
 		103851C921A1F13B00DF794C /* RecordHistoryDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordHistoryDataController.swift; sourceTree = "<group>"; };
 		103851CB21A1F14A00DF794C /* RecordHistoryDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordHistoryDataProtocol.swift; sourceTree = "<group>"; };
+		103851CE21A1FD3000DF794C /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		104CF482219F59CE00CD8942 /* AssetManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF485219F59CE00CD8942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104CF487219F59CE00CD8942 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -395,6 +397,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		103851CD21A1FD1C00DF794C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				103851CE21A1FD3000DF794C /* StringUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		104CF479219F59CE00CD8942 = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +439,7 @@
 				104CF4A7219F5B4300CD8942 /* Scenes */,
 				104CF4A8219F5B5200CD8942 /* Storyboards */,
 				104CF4AC219F5BF900CD8942 /* Styling */,
+				103851CD21A1FD1C00DF794C /* Utils */,
 			);
 			path = AssetManagement;
 			sourceTree = "<group>";
@@ -757,6 +768,7 @@
 				102AF3F721A05AFF008CEE20 /* SessionManager.swift in Sources */,
 				102AF40321A06CDF008CEE20 /* Error+Additions.swift in Sources */,
 				103851A921A1CD4600DF794C /* AddAssetViewController.swift in Sources */,
+				103851CF21A1FD3000DF794C /* StringUtils.swift in Sources */,
 				103851BE21A1E19200DF794C /* AssignAssetToEmployeeRequest.swift in Sources */,
 				103851C021A1EDA600DF794C /* Record.swift in Sources */,
 				103851B221A1D58000DF794C /* AddAssetDataController.swift in Sources */,

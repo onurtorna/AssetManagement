@@ -12,7 +12,7 @@ final class RecordHistoryDataController: RecordHistoryDataProtocol {
 
     func fetchAllRecords(completion: @escaping (([Record]?, Error?) -> Void)) {
 
-        APIClient.fetchAllAssets { (records, error) in
+        APIClient.fetchAllRecords { (records, error) in
             completion(records, error)
         }
     }

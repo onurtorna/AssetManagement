@@ -68,7 +68,8 @@ private extension EmployeeDetailViewController {
     @IBAction func showAssetHistoryButtonTapped(_ sender: Any) {
 
         let recordHistoryViewController = RecordHistoryViewController.loadFromStoryboard()
-        recordHistoryViewController.viewModel = RecordHistoryViewModel(dataController: RecordHistoryDataController())
+        recordHistoryViewController.viewModel = RecordHistoryViewModel(employee: viewModel.employee,
+                                                                       dataController: RecordHistoryDataController())
         navigationController?.pushViewController(recordHistoryViewController,
                                                  animated: true)
     }

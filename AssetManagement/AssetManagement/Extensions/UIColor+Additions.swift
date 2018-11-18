@@ -18,6 +18,10 @@ extension UIColor {
         return UIColor.with(red: 88, green: 111, blue: 143)
     }
 
+    class var aquaGreen: UIColor {
+        return UIColor.with(red: 18, green: 201, blue: 144)
+    }
+
     class var separator: UIColor {
         return UIColor.with(red: 222, green: 222, blue: 222)
     }

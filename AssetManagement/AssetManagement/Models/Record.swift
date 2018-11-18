@@ -24,4 +24,29 @@ struct Record: Codable {
 
     /// Assigned asset Id
     var assetId: Int
+
+    /// Defines if this record is a receive action for specific user
+    var isReceiveRecord: Bool = false
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+
+        let dateString = try values.decode(String.self, forKey: .date)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        date = formatter.date(from: dateString) ?? Date()
+
+        id = try values.decode(Int.self, forKey: .fromEmployeeId)
+        fromEmployeeId = try values.decode(Int.self, forKey: .fromEmployeeId)
+        toEmployeeId = try values.decode(Int.self, forKey: .toEmployeeId)
+        assetId = try values.decode(Int.self, forKey: .assetId)
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case date
+        case fromEmployeeId
+        case toEmployeeId
+        case assetId
+    }
 }
