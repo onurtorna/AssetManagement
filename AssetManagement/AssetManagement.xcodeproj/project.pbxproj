@@ -45,6 +45,9 @@
 		102AF43C21A0BBD1008CEE20 /* AssetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF43B21A0BBD1008CEE20 /* AssetListViewModel.swift */; };
 		102AF43F21A0BC49008CEE20 /* AssetListDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF43E21A0BC49008CEE20 /* AssetListDataProtocol.swift */; };
 		102AF44121A0BC53008CEE20 /* AssetListDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AF44021A0BC53008CEE20 /* AssetListDataController.swift */; };
+		1038519621A18BF000DF794C /* ButtonCustomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038519521A18BF000DF794C /* ButtonCustomizer.swift */; };
+		1038519821A18EB500DF794C /* LabelCustomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038519721A18EB500DF794C /* LabelCustomizer.swift */; };
+		1038519A21A18F1100DF794C /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038519921A18F1100DF794C /* Font.swift */; };
 		104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF485219F59CE00CD8942 /* AppDelegate.swift */; };
 		104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF487219F59CE00CD8942 /* LoginViewController.swift */; };
 		104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF489219F59CE00CD8942 /* Login.storyboard */; };
@@ -114,6 +117,9 @@
 		102AF43B21A0BBD1008CEE20 /* AssetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListViewModel.swift; sourceTree = "<group>"; };
 		102AF43E21A0BC49008CEE20 /* AssetListDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListDataProtocol.swift; sourceTree = "<group>"; };
 		102AF44021A0BC53008CEE20 /* AssetListDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListDataController.swift; sourceTree = "<group>"; };
+		1038519521A18BF000DF794C /* ButtonCustomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCustomizer.swift; sourceTree = "<group>"; };
+		1038519721A18EB500DF794C /* LabelCustomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCustomizer.swift; sourceTree = "<group>"; };
+		1038519921A18F1100DF794C /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		104CF482219F59CE00CD8942 /* AssetManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF485219F59CE00CD8942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104CF487219F59CE00CD8942 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -395,6 +401,9 @@
 		104CF4AC219F5BF900CD8942 /* Styling */ = {
 			isa = PBXGroup;
 			children = (
+				1038519521A18BF000DF794C /* ButtonCustomizer.swift */,
+				1038519921A18F1100DF794C /* Font.swift */,
+				1038519721A18EB500DF794C /* LabelCustomizer.swift */,
 			);
 			path = Styling;
 			sourceTree = "<group>";
@@ -641,6 +650,7 @@
 				102AF41D21A08C0C008CEE20 /* PostLoginPageController.swift in Sources */,
 				102AF40D21A08619008CEE20 /* AMView.swift in Sources */,
 				104CF4BC219F5FBC00CD8942 /* APIClient.swift in Sources */,
+				1038519A21A18F1100DF794C /* Font.swift in Sources */,
 				102AF43C21A0BBD1008CEE20 /* AssetListViewModel.swift in Sources */,
 				102AF44121A0BC53008CEE20 /* AssetListDataController.swift in Sources */,
 				104CF4B2219F5F4B00CD8942 /* Network.swift in Sources */,
@@ -653,7 +663,9 @@
 				104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */,
 				102AF43A21A0B76A008CEE20 /* Asset.swift in Sources */,
 				104CF4B9219F5F8900CD8942 /* ServiceManager.swift in Sources */,
+				1038519621A18BF000DF794C /* ButtonCustomizer.swift in Sources */,
 				102AF43421A0A9DB008CEE20 /* EmployeeDetailViewModel.swift in Sources */,
+				1038519821A18EB500DF794C /* LabelCustomizer.swift in Sources */,
 				102AF3F121A04CAE008CEE20 /* LoginDataProtocol.swift in Sources */,
 				104CF4B4219F5F5800CD8942 /* Response.swift in Sources */,
 				102AF3F921A06763008CEE20 /* HTTPHeader.swift in Sources */,

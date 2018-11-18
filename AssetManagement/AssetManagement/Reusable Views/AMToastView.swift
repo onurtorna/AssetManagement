@@ -31,10 +31,12 @@ class AMToastView {
 
     static var style: ToastStyle {
         var style = ToastStyle()
-        style.backgroundColor = UIColor.cyan
+
+
+        style.backgroundColor = .lightBlue
         style.titleColor = .white
-//        style.messageFont = Font.regular.with(size: 14)
-//        style.titleFont = Font.regular.with(size: 14)
+        style.messageFont = .systemFont(ofSize: 14)
+        style.titleFont = .systemFont(ofSize: 14)
         style.horizontalPadding = 12
         style.messageNumberOfLines = 0
         style.imageSize = CGSize(width: 22, height: 22)

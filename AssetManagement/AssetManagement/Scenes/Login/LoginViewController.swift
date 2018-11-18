@@ -64,7 +64,9 @@ private extension LoginViewController {
     }
 
     func applyStyling() {
-        // TODO: To be implemented
+        LabelCustomizer.applyFont(label: infoLabel, size: 14)
+        ButtonCustomizer.applyRoundedStyling(to: loginButton,
+                                             color: .lightBlue)
     }
 
     func applyLocalization() {

@@ -39,14 +39,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pv7-mD-rPm">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pd4-mU-2xG">
-                                                <rect key="frame" x="20" y="20" width="335" height="150"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KenTech" translatesAutoresizingMaskIntoConstraints="NO" id="pd4-mU-2xG">
+                                                <rect key="frame" x="20" y="20" width="335" height="93"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="30Z-RH-BBE"/>
+                                                    <constraint firstAttribute="width" secondItem="pd4-mU-2xG" secondAttribute="height" multiplier="36:10" id="kw6-EU-aBd"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BcI-l0-dZh">
-                                                <rect key="frame" x="20" y="200" width="335" height="54"/>
+                                                <rect key="frame" x="20" y="143" width="335" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="54" id="6jF-ST-xt8"/>
                                                 </constraints>
@@ -58,7 +58,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ynL-7K-weq">
-                                                <rect key="frame" x="20" y="264" width="335" height="54"/>
+                                                <rect key="frame" x="20" y="207" width="335" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="54" id="amj-xJ-O7f"/>
                                                 </constraints>
@@ -70,17 +70,17 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIr-bi-G8L">
-                                                <rect key="frame" x="20" y="328" width="335" height="0.0"/>
+                                                <rect key="frame" x="20" y="271" width="335" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2e-dG-lOJ">
-                                                <rect key="frame" x="20" y="348" width="335" height="54"/>
+                                                <rect key="frame" x="20" y="291" width="335" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="54" id="fd2-WN-zKo"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Login"/>
                                                 <connections>
                                                     <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yl7-CQ-qxA"/>
                                                 </connections>
@@ -138,6 +138,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="598" y="98"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="KenTech" width="1242" height="338"/>
+    </resources>
 </document>

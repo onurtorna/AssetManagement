@@ -10,6 +10,14 @@ import UIKit
 
 extension UIColor {
 
+    class var lightBlue: UIColor {
+        return UIColor.with(red: 0, green: 119, blue: 181)
+    }
+
+    class var slateBlue: UIColor {
+        return UIColor.with(red: 88, green: 111, blue: 143)
+    }
+
     class var separator: UIColor {
         return UIColor.with(red: 222, green: 222, blue: 222)
     }
