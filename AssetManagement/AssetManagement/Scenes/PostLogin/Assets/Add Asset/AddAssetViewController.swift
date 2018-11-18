@@ -29,6 +29,8 @@ final class AddAssetViewController: UIViewController {
 
     private var isKeyboardPresent = false
 
+    var viewModel: AddAssetViewModel!
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)

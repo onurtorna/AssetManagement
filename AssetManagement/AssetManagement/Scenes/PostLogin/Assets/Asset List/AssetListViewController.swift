@@ -66,6 +66,7 @@ extension AssetListViewController {
 
     @IBAction func addAssetButton(_ sender: Any) {
         let addAssetViewController = AddAssetViewController.loadFromStoryboard()
+        addAssetViewController.viewModel = AddAssetViewModel(dataController: AddAssetDataController())
         navigationController?.pushViewController(addAssetViewController, animated: true)
     }
 }

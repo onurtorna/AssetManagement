@@ -35,6 +35,7 @@ final class AddAssetState {
 final class AddAssetViewModel {
 
     private let state = AddAssetState()
+    private let dataController: AddAssetDataProtocol
 
     var stateChangeHandler: ((AddAssetState.Change) -> Void)? {
         get {
@@ -45,4 +46,7 @@ final class AddAssetViewModel {
         }
     }
 
+    init(dataController: AddAssetDataProtocol) {
+        self.dataController = dataController
+    }
 }

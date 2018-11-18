@@ -88,10 +88,10 @@ extension APIClient {
 // MARK: - Create asset
 extension APIClient {
 
-    static func createEmployee(name: String?,
-                               notes: String?,
-                               serialNumber: String?,
-                               completion: @escaping (Asset?, Error?) -> Void) {
+    static func createAsset(name: String?,
+                            notes: String?,
+                            serialNumber: String?,
+                            completion: @escaping (Asset?, Error?) -> Void) {
 
         APIRouter.createAsset(name: name,
                               notes: notes,
