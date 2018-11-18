@@ -24,6 +24,7 @@ final class EmployeeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        applyStyling()
         applyLocalization()
 
         viewModel.stateChangeHandler = applyState(_:)
@@ -44,6 +45,14 @@ private extension EmployeeDetailViewController {
         case .initialPublish(name: let name):
             infoLabel.text = "Please select action for " + name
         }
+    }
+
+    func applyStyling() {
+
+        ButtonCustomizer.applyEmptyRoundedStyling(to: addAssetButton,
+                                                  color: .lightBlue)
+        ButtonCustomizer.applyEmptyRoundedStyling(to: showAssetHistoryButton,
+                                                  color: .lightBlue)
     }
 
     func applyLocalization() {

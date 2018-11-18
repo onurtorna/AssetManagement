@@ -51,9 +51,8 @@ private extension AssetListViewController {
 
     func applyStyling() {
 
-        buttonStackView.addSeparatorAtTop(leftMargin: 0,
-                                          rightMargin: 0,
-                                          color: .black)
+        ButtonCustomizer.applyBackgroundColor(to: addAssetButton,
+                                              color: .lightBlue)
     }
 
     func applyLocalization() {
