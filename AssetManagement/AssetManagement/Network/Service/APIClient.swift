@@ -126,3 +126,17 @@ extension APIClient {
         }
     }
 }
+
+// MARK: - All records
+extension APIClient {
+
+    static func fetchAllAssets(completion: @escaping (([Record]?, Error?) -> Void)) {
+
+        APIRouter.allAssets.request.responseJSON { (dataResponse) in
+
+            ServiceManager.handleResponse(dataResponse,
+                                          of: [Record].self,
+                                          completion: completion)
+        }
+    }
+}
