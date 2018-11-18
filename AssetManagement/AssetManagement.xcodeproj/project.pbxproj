@@ -51,6 +51,8 @@
 		1038519D21A19BFA00DF794C /* AddNewEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038519C21A19BFA00DF794C /* AddNewEmployeeViewController.swift */; };
 		1038519F21A19ED300DF794C /* AddNewEmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038519E21A19ED300DF794C /* AddNewEmployeeViewModel.swift */; };
 		103851A121A19FA800DF794C /* CreateEmployeeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851A021A19FA800DF794C /* CreateEmployeeRequest.swift */; };
+		103851A421A1A0CD00DF794C /* AddNewEmployeeDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851A321A1A0CD00DF794C /* AddNewEmployeeDataProtocol.swift */; };
+		103851A621A1A0DE00DF794C /* AddNewEmployeeDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851A521A1A0DE00DF794C /* AddNewEmployeeDataController.swift */; };
 		104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF485219F59CE00CD8942 /* AppDelegate.swift */; };
 		104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF487219F59CE00CD8942 /* LoginViewController.swift */; };
 		104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF489219F59CE00CD8942 /* Login.storyboard */; };
@@ -126,6 +128,8 @@
 		1038519C21A19BFA00DF794C /* AddNewEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEmployeeViewController.swift; sourceTree = "<group>"; };
 		1038519E21A19ED300DF794C /* AddNewEmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEmployeeViewModel.swift; sourceTree = "<group>"; };
 		103851A021A19FA800DF794C /* CreateEmployeeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmployeeRequest.swift; sourceTree = "<group>"; };
+		103851A321A1A0CD00DF794C /* AddNewEmployeeDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEmployeeDataProtocol.swift; sourceTree = "<group>"; };
+		103851A521A1A0DE00DF794C /* AddNewEmployeeDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEmployeeDataController.swift; sourceTree = "<group>"; };
 		104CF482219F59CE00CD8942 /* AssetManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF485219F59CE00CD8942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104CF487219F59CE00CD8942 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -285,10 +289,20 @@
 		1038519B21A19BE600DF794C /* Add Emploeyee */ = {
 			isa = PBXGroup;
 			children = (
+				103851A221A1A0B500DF794C /* Network */,
 				1038519C21A19BFA00DF794C /* AddNewEmployeeViewController.swift */,
 				1038519E21A19ED300DF794C /* AddNewEmployeeViewModel.swift */,
 			);
 			path = "Add Emploeyee";
+			sourceTree = "<group>";
+		};
+		103851A221A1A0B500DF794C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				103851A321A1A0CD00DF794C /* AddNewEmployeeDataProtocol.swift */,
+				103851A521A1A0DE00DF794C /* AddNewEmployeeDataController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		104CF479219F59CE00CD8942 = {
@@ -658,6 +672,7 @@
 				103851A121A19FA800DF794C /* CreateEmployeeRequest.swift in Sources */,
 				102AF3F321A05901008CEE20 /* User.swift in Sources */,
 				102AF42D21A09D6B008CEE20 /* EmployeeListDataProtocol.swift in Sources */,
+				103851A421A1A0CD00DF794C /* AddNewEmployeeDataProtocol.swift in Sources */,
 				104CF4B0219F5F3800CD8942 /* ErrorHandler.swift in Sources */,
 				102AF3FB21A068E4008CEE20 /* AllEmployeesResponse.swift in Sources */,
 				104CF4C1219F6A6000CD8942 /* LoginRequest.swift in Sources */,
@@ -687,6 +702,7 @@
 				102AF43421A0A9DB008CEE20 /* EmployeeDetailViewModel.swift in Sources */,
 				1038519821A18EB500DF794C /* LabelCustomizer.swift in Sources */,
 				102AF3F121A04CAE008CEE20 /* LoginDataProtocol.swift in Sources */,
+				103851A621A1A0DE00DF794C /* AddNewEmployeeDataController.swift in Sources */,
 				104CF4B4219F5F5800CD8942 /* Response.swift in Sources */,
 				102AF3F921A06763008CEE20 /* HTTPHeader.swift in Sources */,
 				102AF3FD21A0690A008CEE20 /* EmployeeResponse.swift in Sources */,

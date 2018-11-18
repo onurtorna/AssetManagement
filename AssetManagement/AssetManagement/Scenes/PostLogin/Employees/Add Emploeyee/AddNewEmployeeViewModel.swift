@@ -13,7 +13,7 @@ final class AddNewEmployeeState {
     enum Change {
         case error(message: String?)
         case loading(Bool)
-        case dataFetch
+        case success
     }
 
     var onChange: ((AddNewEmployeeState.Change) -> Void)?
@@ -31,11 +31,15 @@ final class AddNewEmployeeState {
             onChange?(.error(message: receivedErrorMessage))
         }
     }
+
+    /// Entered employee name by the admin
+    var employeeName: String?
 }
 
 final class AddNewEmployeeViewModel {
 
     private let state = AddNewEmployeeState()
+    private let dataController: AddNewEmployeeDataProtocol
 
     var stateChangeHandler: ((AddNewEmployeeState.Change) -> Void)? {
         get {
@@ -43,6 +47,35 @@ final class AddNewEmployeeViewModel {
         }
         set {
             state.onChange = newValue
+        }
+    }
+
+    init(dataController: AddNewEmployeeDataProtocol) {
+        self.dataController = dataController
+    }
+
+    func updateEmployeeName(_ value: String?) {
+        state.employeeName = value
+    }
+}
+
+// MARK: - Network
+extension AddNewEmployeeViewModel {
+
+    func createNewEmployee() {
+
+        state.isLoading = true
+        dataController.createEmployee(name: state.employeeName) { [weak self] (user, error) in
+            self?.state.isLoading = false
+            guard let strongSelf = self else { return }
+            guard error == nil else {
+                strongSelf.state.receivedErrorMessage = error?.am_message
+                return
+            }
+
+            if user != nil {
+                strongSelf.stateChangeHandler?(.success)
+            }
         }
     }
 }
