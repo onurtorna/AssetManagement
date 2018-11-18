@@ -81,12 +81,12 @@
 		103851EA21A20C1500DF794C /* AssignAssetToEmployeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851E921A20C1500DF794C /* AssignAssetToEmployeeTests.swift */; };
 		103851ED21A20DEC00DF794C /* RecordHistoryDummyDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851EC21A20DEC00DF794C /* RecordHistoryDummyDataController.swift */; };
 		103851EF21A20EAB00DF794C /* RecordHistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851EE21A20EAB00DF794C /* RecordHistoryTests.swift */; };
+		103851F221A215DC00DF794C /* StringUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851F121A215DC00DF794C /* StringUtilTests.swift */; };
 		104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF485219F59CE00CD8942 /* AppDelegate.swift */; };
 		104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF487219F59CE00CD8942 /* LoginViewController.swift */; };
 		104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF489219F59CE00CD8942 /* Login.storyboard */; };
 		104CF48D219F59CF00CD8942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104CF48C219F59CF00CD8942 /* Assets.xcassets */; };
 		104CF490219F59CF00CD8942 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF48E219F59CF00CD8942 /* LaunchScreen.storyboard */; };
-		104CF49B219F59CF00CD8942 /* AssetManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF49A219F59CF00CD8942 /* AssetManagementTests.swift */; };
 		104CF4B0219F5F3800CD8942 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF4AF219F5F3800CD8942 /* ErrorHandler.swift */; };
 		104CF4B2219F5F4B00CD8942 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF4B1219F5F4B00CD8942 /* Network.swift */; };
 		104CF4B4219F5F5800CD8942 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF4B3219F5F5800CD8942 /* Response.swift */; };
@@ -186,6 +186,7 @@
 		103851E921A20C1500DF794C /* AssignAssetToEmployeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignAssetToEmployeeTests.swift; sourceTree = "<group>"; };
 		103851EC21A20DEC00DF794C /* RecordHistoryDummyDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordHistoryDummyDataController.swift; sourceTree = "<group>"; };
 		103851EE21A20EAB00DF794C /* RecordHistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordHistoryTests.swift; sourceTree = "<group>"; };
+		103851F121A215DC00DF794C /* StringUtilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtilTests.swift; sourceTree = "<group>"; };
 		104CF482219F59CE00CD8942 /* AssetManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF485219F59CE00CD8942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104CF487219F59CE00CD8942 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -194,7 +195,6 @@
 		104CF48F219F59CF00CD8942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		104CF491219F59CF00CD8942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		104CF496219F59CF00CD8942 /* AssetManagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssetManagementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		104CF49A219F59CF00CD8942 /* AssetManagementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManagementTests.swift; sourceTree = "<group>"; };
 		104CF49C219F59CF00CD8942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		104CF4AF219F5F3800CD8942 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		104CF4B1219F5F4B00CD8942 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -502,6 +502,14 @@
 			path = "Record History";
 			sourceTree = "<group>";
 		};
+		103851F021A2158500DF794C /* Util Tests */ = {
+			isa = PBXGroup;
+			children = (
+				103851F121A215DC00DF794C /* StringUtilTests.swift */,
+			);
+			path = "Util Tests";
+			sourceTree = "<group>";
+		};
 		104CF479219F59CE00CD8942 = {
 			isa = PBXGroup;
 			children = (
@@ -544,10 +552,10 @@
 		104CF499219F59CF00CD8942 /* AssetManagementTests */ = {
 			isa = PBXGroup;
 			children = (
+				103851F021A2158500DF794C /* Util Tests */,
 				103851DB21A2089700DF794C /* Employee */,
 				103851D521A206EF00DF794C /* Assets */,
 				103851D021A204D400DF794C /* Login */,
-				104CF49A219F59CF00CD8942 /* AssetManagementTests.swift */,
 				104CF49C219F59CF00CD8942 /* Info.plist */,
 			);
 			path = AssetManagementTests;
@@ -941,7 +949,6 @@
 			files = (
 				103851EA21A20C1500DF794C /* AssignAssetToEmployeeTests.swift in Sources */,
 				103851EF21A20EAB00DF794C /* RecordHistoryTests.swift in Sources */,
-				104CF49B219F59CF00CD8942 /* AssetManagementTests.swift in Sources */,
 				103851E821A20B8000DF794C /* AssignAssetToEmployeeDummyDataController.swift in Sources */,
 				103851D421A2056400DF794C /* LoginDummyDataController.swift in Sources */,
 				103851E021A2092D00DF794C /* EmployeeListTests.swift in Sources */,
@@ -952,6 +959,7 @@
 				103851E521A20A8700DF794C /* AddAssetTests.swift in Sources */,
 				103851D221A204EB00DF794C /* LoginTests.swift in Sources */,
 				103851D821A2070E00DF794C /* AssetListDummyDataController.swift in Sources */,
+				103851F221A215DC00DF794C /* StringUtilTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1107,6 +1115,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BGSGVDNYY7;
 				INFOPLIST_FILE = AssetManagement/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1125,6 +1134,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BGSGVDNYY7;
 				INFOPLIST_FILE = AssetManagement/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
