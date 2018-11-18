@@ -20,6 +20,10 @@ enum APIRouter {
 
     case allAssets
 
+    case createAsset(name: String?,
+        notes: String?,
+        serialNumber: String?)
+
     // MARK: - Request
     var request: Alamofire.DataRequest {
 
@@ -40,7 +44,8 @@ enum APIRouter {
 
         switch self {
         case .login,
-             .createEmployee:
+             .createEmployee,
+             .createAsset:
             return .post
 
         case .allEmployees,
@@ -76,6 +81,9 @@ enum APIRouter {
         case .allAssets:
             return "assets"
 
+        case .createAsset:
+            return "assets"
+
         }
     }
 
@@ -99,7 +107,12 @@ enum APIRouter {
 
         case .createEmployee(fullName: let name):
             return CreateEmployeeRequest.generateParameters(name: name)
-            
+
+        case let .createAsset(name: name, notes: notes, serialNumber: serialNumber):
+            return CreateAssetRequest.generateParameters(name: name,
+                                                         notes: notes,
+                                                         serialNumber: serialNumber)
+
         case .employee,
              .allEmployees,
              .allAssets:

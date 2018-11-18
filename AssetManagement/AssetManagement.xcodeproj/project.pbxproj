@@ -55,6 +55,7 @@
 		103851A621A1A0DE00DF794C /* AddNewEmployeeDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851A521A1A0DE00DF794C /* AddNewEmployeeDataController.swift */; };
 		103851A921A1CD4600DF794C /* AddAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851A821A1CD4600DF794C /* AddAssetViewController.swift */; };
 		103851AB21A1D39A00DF794C /* AddAssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851AA21A1D39A00DF794C /* AddAssetViewModel.swift */; };
+		103851AD21A1D47200DF794C /* CreateAssetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851AC21A1D47200DF794C /* CreateAssetRequest.swift */; };
 		104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF485219F59CE00CD8942 /* AppDelegate.swift */; };
 		104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF487219F59CE00CD8942 /* LoginViewController.swift */; };
 		104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF489219F59CE00CD8942 /* Login.storyboard */; };
@@ -134,6 +135,7 @@
 		103851A521A1A0DE00DF794C /* AddNewEmployeeDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEmployeeDataController.swift; sourceTree = "<group>"; };
 		103851A821A1CD4600DF794C /* AddAssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssetViewController.swift; sourceTree = "<group>"; };
 		103851AA21A1D39A00DF794C /* AddAssetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssetViewModel.swift; sourceTree = "<group>"; };
+		103851AC21A1D47200DF794C /* CreateAssetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAssetRequest.swift; sourceTree = "<group>"; };
 		104CF482219F59CE00CD8942 /* AssetManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF485219F59CE00CD8942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104CF487219F59CE00CD8942 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -479,6 +481,7 @@
 			children = (
 				104CF4C0219F6A6000CD8942 /* LoginRequest.swift */,
 				103851A021A19FA800DF794C /* CreateEmployeeRequest.swift */,
+				103851AC21A1D47200DF794C /* CreateAssetRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -727,6 +730,7 @@
 				102AF40821A0751D008CEE20 /* UIViewController+Toaster.swift in Sources */,
 				102AF42A21A09CAD008CEE20 /* EmployeeListViewModel.swift in Sources */,
 				102AF41521A08889008CEE20 /* UIView+Constraints.swift in Sources */,
+				103851AD21A1D47200DF794C /* CreateAssetRequest.swift in Sources */,
 				102AF43821A0B53B008CEE20 /* UIColor+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

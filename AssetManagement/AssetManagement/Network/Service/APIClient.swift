@@ -84,3 +84,23 @@ extension APIClient {
         }
     }
 }
+
+// MARK: - Create asset
+extension APIClient {
+
+    static func createEmployee(name: String?,
+                               notes: String?,
+                               serialNumber: String?,
+                               completion: @escaping (Asset?, Error?) -> Void) {
+
+        APIRouter.createAsset(name: name,
+                              notes: notes,
+                              serialNumber: serialNumber)
+            .request.responseJSON { (dataResponse) in
+
+                ServiceManager.handleResponse(dataResponse,
+                                              of: Asset.self,
+                                              completion: completion)
+        }
+    }
+}
