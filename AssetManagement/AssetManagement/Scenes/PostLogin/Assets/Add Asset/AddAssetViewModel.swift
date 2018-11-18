@@ -13,6 +13,7 @@ final class AddAssetState {
     enum Change {
         case error(message: String?)
         case loading(Bool)
+        case success
     }
 
     var onChange: ((AddAssetState.Change) -> Void)?
@@ -48,5 +49,31 @@ final class AddAssetViewModel {
 
     init(dataController: AddAssetDataProtocol) {
         self.dataController = dataController
+    }
+}
+
+// MARK: - Network
+extension AddAssetViewModel {
+
+    func addAsset(name: String?,
+                  notes: String?,
+                  serialNumber: String?) {
+
+        state.isLoading = true
+        dataController.createAsset(name: name,
+                                   notes: notes,
+                                   serialNumber: serialNumber) { [weak self] (asset, error) in
+
+                                    self?.state.isLoading = false
+                                    guard let strongSelf = self else { return }
+                                    guard error == nil else {
+                                        strongSelf.state.receivedErrorMessage = error?.am_message
+                                        return
+                                    }
+
+                                    if asset != nil {
+                                        strongSelf.stateChangeHandler?(.success)
+                                    }
+        }
     }
 }

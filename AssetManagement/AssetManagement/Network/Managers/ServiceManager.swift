@@ -29,7 +29,8 @@ final class ServiceManager: NSObject {
         }
 
         let error = ErrorHandler.error(from: response)
-        guard let responseData = response.data else {
+        guard let responseData = response.data,
+            error?.am_message == nil else {
             completion(nil, error)
             return
         }

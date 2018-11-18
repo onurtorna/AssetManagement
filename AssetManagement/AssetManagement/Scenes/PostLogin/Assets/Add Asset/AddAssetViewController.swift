@@ -44,11 +44,28 @@ final class AddAssetViewController: UIViewController {
         addToolbarToTextFields()
         registerForKeyboardNotifications()
         hideKeyboardWhenTappedOutside()
+
+        viewModel.stateChangeHandler = applyState(_:)
     }
 }
 
 // MARK: - Helpers
 private extension AddAssetViewController {
+
+    func applyState(_ change: AddAssetState.Change) {
+
+        switch change {
+        case .loading(let isLoading):
+            showLoading(isLoading)
+
+        case .error(message: let message):
+            showToaster(type: .error, text: message)
+
+        case .success:
+            showToaster(type: .success, text: "Asset Added Successfully!")
+            navigationController?.popViewController(animated: true)
+        }
+    }
 
     func applyStyling() {
 
@@ -146,7 +163,9 @@ private extension AddAssetViewController {
     }
 
     @IBAction func addAssetButtonTapped(_ sender: Any) {
-        // TODO: To be implemented
+        viewModel.addAsset(name: nameTextField.text,
+                           notes: notesTextField.text,
+                           serialNumber: serialNumberTextField.text)
     }
 
     @IBAction func textFieldEditingDidBegin(_ sender: UITextField) {

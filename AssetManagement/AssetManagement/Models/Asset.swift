@@ -23,5 +23,5 @@ struct Asset: Codable {
     var serialNumber: String
 
     /// Id of the employee who holds the asset at the moment
-    var employeeId: Int
+    var employeeId: Int?
 }
