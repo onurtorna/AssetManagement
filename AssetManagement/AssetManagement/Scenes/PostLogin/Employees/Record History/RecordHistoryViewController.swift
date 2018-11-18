@@ -15,13 +15,15 @@ final class RecordHistoryViewController: UIViewController {
     }
 
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var emptyStateInfo: UILabel!
 
     var viewModel: RecordHistoryViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "History"
+        applyStyling()
+        applyLocalization()
 
         tableView.dataSource = self
 
@@ -43,13 +45,22 @@ private extension RecordHistoryViewController {
 
         case .dataFetch(isListEmpty: let isEmpty):
             tableView.isHidden = isEmpty
-            if isEmpty {
-                tableView.isHidden = true
-            } else {
-                tableView.reloadData()
-            }
+            emptyStateInfo.isHidden = !isEmpty
+            tableView.reloadData()
 
         }
+    }
+
+    func applyStyling() {
+        LabelCustomizer.applyFont(label: emptyStateInfo,
+                                  font: .bold,
+                                  size: 16,
+                                  color: .black)
+    }
+
+    func applyLocalization() {
+        emptyStateInfo.text = "No Records found for the employee.."
+        title = "History"
     }
 }
 
