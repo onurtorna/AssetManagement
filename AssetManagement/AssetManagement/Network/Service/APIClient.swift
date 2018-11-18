@@ -56,6 +56,21 @@ extension APIClient {
     }
 }
 
+// MARK: - Create employee
+extension APIClient {
+
+    static func createEmployee(name: String?,
+                               completion: @escaping (User?, Error?) -> Void) {
+
+        APIRouter.createEmployee(fullName: name).request.responseJSON { (dataResponse) in
+
+            ServiceManager.handleResponse(dataResponse,
+                                          of: User.self,
+                                          completion: completion)
+        }
+    }
+}
+
 // MARK: - Get all assetss
 extension APIClient {
 

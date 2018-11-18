@@ -14,6 +14,8 @@ enum APIRouter {
 
     case employee(id: Int)
 
+    case createEmployee(fullName: String?)
+
     case allEmployees
 
     case allAssets
@@ -37,7 +39,8 @@ enum APIRouter {
     var method: HTTPMethod {
 
         switch self {
-        case .login:
+        case .login,
+             .createEmployee:
             return .post
 
         case .allEmployees,
@@ -67,6 +70,9 @@ enum APIRouter {
         case let .employee(id: id):
             return "employees/\(id)"
 
+        case .createEmployee:
+            return "employees"
+
         case .allAssets:
             return "assets"
 
@@ -90,6 +96,10 @@ enum APIRouter {
         case let .login(email: email, password: password):
             return LoginRequest.generateParameters(email: email,
                                                    password: password)
+
+        case .createEmployee(fullName: let name):
+            return CreateEmployeeRequest.generateParameters(name: name)
+            
         case .employee,
              .allEmployees,
              .allAssets:
