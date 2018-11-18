@@ -37,6 +37,7 @@ final class RecordHistoryState {
 final class RecordHistoryViewModel {
 
     private let state = RecordHistoryState()
+    private let dataController: RecordHistoryDataProtocol
 
     var stateChangeHandler: ((RecordHistoryState.Change) -> Void)? {
         get {
@@ -45,5 +46,9 @@ final class RecordHistoryViewModel {
         set {
             state.onChange = newValue
         }
+    }
+
+    init(dataController: RecordHistoryDataProtocol) {
+        self.dataController = dataController
     }
 }

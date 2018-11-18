@@ -16,6 +16,7 @@ final class RecordHistoryViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
 
+    var viewModel: RecordHistoryViewModel!
 }
 
 // MARK: - StoryboardLoadable

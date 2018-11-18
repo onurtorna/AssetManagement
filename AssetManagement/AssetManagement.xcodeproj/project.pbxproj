@@ -66,6 +66,8 @@
 		103851C021A1EDA600DF794C /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851BF21A1EDA600DF794C /* Record.swift */; };
 		103851C521A1EF9400DF794C /* RecordHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851C421A1EF9400DF794C /* RecordHistoryViewController.swift */; };
 		103851C721A1F0B300DF794C /* RecordHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851C621A1F0B300DF794C /* RecordHistoryViewModel.swift */; };
+		103851CA21A1F13B00DF794C /* RecordHistoryDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851C921A1F13B00DF794C /* RecordHistoryDataController.swift */; };
+		103851CC21A1F14A00DF794C /* RecordHistoryDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103851CB21A1F14A00DF794C /* RecordHistoryDataProtocol.swift */; };
 		104CF486219F59CE00CD8942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF485219F59CE00CD8942 /* AppDelegate.swift */; };
 		104CF488219F59CE00CD8942 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104CF487219F59CE00CD8942 /* LoginViewController.swift */; };
 		104CF48B219F59CE00CD8942 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104CF489219F59CE00CD8942 /* Login.storyboard */; };
@@ -156,6 +158,8 @@
 		103851BF21A1EDA600DF794C /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		103851C421A1EF9400DF794C /* RecordHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordHistoryViewController.swift; sourceTree = "<group>"; };
 		103851C621A1F0B300DF794C /* RecordHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordHistoryViewModel.swift; sourceTree = "<group>"; };
+		103851C921A1F13B00DF794C /* RecordHistoryDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordHistoryDataController.swift; sourceTree = "<group>"; };
+		103851CB21A1F14A00DF794C /* RecordHistoryDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordHistoryDataProtocol.swift; sourceTree = "<group>"; };
 		104CF482219F59CE00CD8942 /* AssetManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104CF485219F59CE00CD8942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		104CF487219F59CE00CD8942 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -375,10 +379,20 @@
 		103851C321A1EF7C00DF794C /* Record History */ = {
 			isa = PBXGroup;
 			children = (
+				103851C821A1F12B00DF794C /* Network */,
 				103851C421A1EF9400DF794C /* RecordHistoryViewController.swift */,
 				103851C621A1F0B300DF794C /* RecordHistoryViewModel.swift */,
 			);
 			path = "Record History";
+			sourceTree = "<group>";
+		};
+		103851C821A1F12B00DF794C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				103851C921A1F13B00DF794C /* RecordHistoryDataController.swift */,
+				103851CB21A1F14A00DF794C /* RecordHistoryDataProtocol.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		104CF479219F59CE00CD8942 = {
@@ -774,6 +788,7 @@
 				102AF44121A0BC53008CEE20 /* AssetListDataController.swift in Sources */,
 				104CF4B2219F5F4B00CD8942 /* Network.swift in Sources */,
 				103851C521A1EF9400DF794C /* RecordHistoryViewController.swift in Sources */,
+				103851CA21A1F13B00DF794C /* RecordHistoryDataController.swift in Sources */,
 				102AF40F21A08641008CEE20 /* NibLoadable.swift in Sources */,
 				102AF3EC21A04B30008CEE20 /* LoginViewModel.swift in Sources */,
 				102AF43621A0B4AF008CEE20 /* UIView+Separator.swift in Sources */,
@@ -796,6 +811,7 @@
 				102AF3FD21A0690A008CEE20 /* EmployeeResponse.swift in Sources */,
 				104CF4C3219F70CF00CD8942 /* Dictionary+JSON.swift in Sources */,
 				102AF43F21A0BC49008CEE20 /* AssetListDataProtocol.swift in Sources */,
+				103851CC21A1F14A00DF794C /* RecordHistoryDataProtocol.swift in Sources */,
 				103851B021A1D57100DF794C /* AddAssetDataProtocol.swift in Sources */,
 				103851BA21A1E10B00DF794C /* AssignAssetToEmployeeDataProtocol.swift in Sources */,
 				102AF40821A0751D008CEE20 /* UIViewController+Toaster.swift in Sources */,
