@@ -72,6 +72,16 @@ extension EmployeeListViewController {
     }
 }
 
+// MARK: - Actions
+private extension EmployeeListViewController {
+
+    @IBAction func addEmployeeButtonTapped(_ sender: Any) {
+        let addNewEmployeeViewController = AddNewEmployeeViewController.loadFromStoryboard()
+        navigationController?.pushViewController(addNewEmployeeViewController,
+                                                 animated: true)
+    }
+}
+
 // MARK: - UITableViewDelegate
 extension EmployeeListViewController: UITableViewDelegate {
 

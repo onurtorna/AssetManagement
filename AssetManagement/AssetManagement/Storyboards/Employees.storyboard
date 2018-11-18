@@ -47,6 +47,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqL-sz-HYK">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                         <state key="normal" title="Add Employee"/>
+                                        <connections>
+                                            <action selector="addEmployeeButtonTapped:" destination="2PF-tC-eFc" eventType="touchUpInside" id="K2Q-UR-wvq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -145,6 +148,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMf-vm-d2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="991" y="-447"/>
+        </scene>
+        <!--Add New Employee View Controller-->
+        <scene sceneID="JoG-2A-fkB">
+            <objects>
+                <viewController storyboardIdentifier="AddNewEmployeeViewController" id="fxw-yq-46o" customClass="AddNewEmployeeViewController" customModule="AssetManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Evo-4R-LLU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OmC-g4-Tso">
+                                <rect key="frame" x="20" y="70" width="335" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="V5n-uu-b7I"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXv-Qp-29j">
+                                <rect key="frame" x="20" y="50" width="335" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLI-Lp-hwD">
+                                <rect key="frame" x="20" y="144" width="335" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="O9h-E6-m3y"/>
+                                </constraints>
+                                <state key="normal" title="Add New Employee"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LXv-Qp-29j" firstAttribute="leading" secondItem="mM3-zK-tUV" secondAttribute="leading" constant="20" id="3nX-wG-wM1"/>
+                            <constraint firstItem="mM3-zK-tUV" firstAttribute="trailing" secondItem="uLI-Lp-hwD" secondAttribute="trailing" constant="20" id="ECp-6V-QpF"/>
+                            <constraint firstItem="LXv-Qp-29j" firstAttribute="top" secondItem="mM3-zK-tUV" secondAttribute="top" constant="30" id="RNP-jf-oe3"/>
+                            <constraint firstItem="mM3-zK-tUV" firstAttribute="trailing" secondItem="OmC-g4-Tso" secondAttribute="trailing" constant="20" id="STd-92-e90"/>
+                            <constraint firstItem="OmC-g4-Tso" firstAttribute="top" secondItem="LXv-Qp-29j" secondAttribute="bottom" constant="20" id="Xqk-sV-qMJ"/>
+                            <constraint firstItem="uLI-Lp-hwD" firstAttribute="top" secondItem="OmC-g4-Tso" secondAttribute="bottom" constant="20" id="Xrv-vh-ITi"/>
+                            <constraint firstItem="mM3-zK-tUV" firstAttribute="trailing" secondItem="LXv-Qp-29j" secondAttribute="trailing" constant="20" id="ZLB-wt-yu7"/>
+                            <constraint firstItem="OmC-g4-Tso" firstAttribute="leading" secondItem="mM3-zK-tUV" secondAttribute="leading" constant="20" id="nhp-cS-bUt"/>
+                            <constraint firstItem="uLI-Lp-hwD" firstAttribute="leading" secondItem="mM3-zK-tUV" secondAttribute="leading" constant="20" id="s6j-xr-1VT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mM3-zK-tUV"/>
+                    </view>
+                    <connections>
+                        <outlet property="addEmployeeButton" destination="uLI-Lp-hwD" id="ai4-nf-D2q"/>
+                        <outlet property="employeeNameTextField" destination="OmC-g4-Tso" id="8sf-Xd-p3j"/>
+                        <outlet property="infoLabel" destination="LXv-Qp-29j" id="esH-TG-aui"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M94-F0-b1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967" y="368"/>
         </scene>
     </scenes>
 </document>
